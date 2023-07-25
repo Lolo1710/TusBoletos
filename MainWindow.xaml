@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProyectotTUSBOLETOS"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Width="600" HorizontalAlignment="Left">
         <Grid.Background>
             <ImageBrush ImageSource="Img\fondo.jpg" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
