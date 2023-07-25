@@ -126,5 +126,6 @@ namespace ProyectotTUSBOLETOS.Vistas
             gerente.Show();
             this.Close();
         }
+
     }
 }
