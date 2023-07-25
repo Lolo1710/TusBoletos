@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProyectotTUSBOLETOS.Vistas"
         mc:Ignorable="d"
         Title="Eventos" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FFD1ECE6">
         <Label Content="Eventos" HorizontalAlignment="Left" Margin="353,16,0,0" VerticalAlignment="Top" FontSize="50"/>
         <Grid HorizontalAlignment="Left" Margin="10,18,0,69" Width="172">
             <Label Content="Nombre" HorizontalAlignment="Left" Margin="11,39,0,0" VerticalAlignment="Top"/>
@@ -21,7 +21,7 @@
             <Label Content="Fecha" HorizontalAlignment="Left" Margin="16,216,0,0" VerticalAlignment="Top"/>
             <DatePicker x:Name="dateInput" Margin="0,243,10,0" VerticalAlignment="Top"/>
         </Grid>
-        <DataGrid x:Name="EventTable"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="217,112,10,56">
+        <DataGrid x:Name="EventTable"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="217,112,10,56" Background="#FFC3B7B7">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding PkEvento}" />
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
