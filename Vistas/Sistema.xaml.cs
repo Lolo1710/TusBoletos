@@ -109,6 +109,11 @@ namespace ProyectotTUSBOLETOS.Vistas
             GetUserTable();
         }
 
-
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            Gerente gerente = new Gerente();
+            gerente.Show();
+            this.Close();
+        }
     }
 }

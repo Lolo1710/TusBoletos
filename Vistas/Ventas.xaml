@@ -12,5 +12,10 @@
         <Grid Margin="0,0,400,217" Width="400">
             <lvc:CartesianChart Series="{Binding SeriesCollection}" Margin="0,94,-399,-209" />
         </Grid>
+        <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="81,35,0,0" VerticalAlignment="Top" Width="54" Height="34" Click="back_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\izquierda.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

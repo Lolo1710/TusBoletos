@@ -49,5 +49,10 @@
         </DataGrid>
         <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="10,363,0,0" VerticalAlignment="Top" Height="30" Width="81" Click="btnLimpiar_Click"/>
         <Button x:Name="btnAdd" Content="Guardar" HorizontalAlignment="Left" Margin="96,363,0,0" VerticalAlignment="Top" Height="30" Width="86" Click="btnAdd_Click"/>
+        <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="187,16,0,0" VerticalAlignment="Top" Width="54" Height="34" Click="back_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\izquierda.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

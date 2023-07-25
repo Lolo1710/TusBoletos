@@ -38,21 +38,30 @@ namespace ProyectotTUSBOLETOS
             string password = txtPassword.Password;
 
             var response = services.Login(user, password);
-            ventas.PasarDatos(response);
+            //ventas.PasarDatos(response);
 
             //MessageBox.Show($"{response.Nombre} {response.PkUsuario}");
 
-            if (response.Roles.Nombre == "Super Admin")
+            if(response != null)
             {
-                Gerente inicio = new Gerente();
-                Close();
-                inicio.Show();
+                if (response.Roles.Nombre == "Super Admin")
+                {
+                    Gerente inicio = new Gerente();
+                    Close();
+                    inicio.Show();
+                }
+                else
+                {
+                    Vendedor inicio = new Vendedor();
+                    Close();
+                    inicio.Show();
+                }
             }
             else
             {
-                Vendedor inicio = new Vendedor();
-                Close();
-                inicio.Show();
+                MessageBox.Show("Datos incorrectos");
+                txtPassword.Clear();    
+                txtUserName.Clear();
             }
         }
     }
