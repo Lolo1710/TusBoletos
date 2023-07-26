@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:ProyectotTUSBOLETOS.Vistas"
         mc:Ignorable="d"
         Title="Sistema" Height="450" Width="800">
-    <Grid>
+    <Grid Width="800" Height="460" VerticalAlignment="Center" HorizontalAlignment="Center">
         <Grid.RowDefinitions>
             <RowDefinition Height="137*"/>
             <RowDefinition Height="297*"/>
         </Grid.RowDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="\Img\fondo.jpg" AlignmentY="Top" AlignmentX="Center"/>
+            <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\avion.png" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
 
         <Label FontSize="50" Content="Usuarios" HorizontalAlignment="Left" Height="67" Margin="331,16,0,0" VerticalAlignment="Top" Width="234" FontFamily="Yu Gothic UI Semibold"/>
@@ -22,7 +22,7 @@
         <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="25" Margin="50,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Grid.Row="1"/>
         <Label Content="Password" HorizontalAlignment="Left" Height="26" Margin="50,71,0,0" VerticalAlignment="Top" Width="102" FontFamily="Arial Black" Grid.Row="1"/>
         <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="24" Margin="50,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Grid.Row="1"/>
-        <Button x:Name="BtnAdd" Content="Guardar" HorizontalAlignment="Left" Height="23" Margin="67,202,0,0" VerticalAlignment="Top" Width="68" Background="#FF96E486" Click="BtnAdd_Click" FontFamily="Arial Black" Grid.Row="1"/>
+        <Button x:Name="BtnAdd" Content="Guardar" HorizontalAlignment="Left" Height="23" Margin="67,202,0,0" VerticalAlignment="Top" Width="68" Background="#FF61D7E8" Click="BtnAdd_Click" FontFamily="Arial Black" Grid.Row="1"/>
 
         <DataGrid x:Name="UserTable"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="175,110,52,76" Grid.RowSpan="2">
             <DataGrid.Columns>
@@ -52,9 +52,9 @@
         <Label Content="Rol" HorizontalAlignment="Left" Height="26" Margin="50,126,0,0" VerticalAlignment="Top" Width="108" FontFamily="Arial Black" Grid.Row="1"/>
         <ComboBox x:Name="SelectRol" HorizontalAlignment="Left" Margin="50,152,0,0" VerticalAlignment="Top" Width="102" Grid.Row="1"/>
         <TextBox x:Name="txtPkUser" HorizontalAlignment="Left" Height="18" Margin="50,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" IsEnabled="False"/>
-        <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="81,35,0,0" VerticalAlignment="Top" Width="54" Height="34" Click="back_Click">
+        <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="81,35,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="back_Click" BorderThickness="0,0,0,0">
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\izquierda.png"/>
+                <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\avi.png"/>
             </Button.Background>
         </Button>
 
