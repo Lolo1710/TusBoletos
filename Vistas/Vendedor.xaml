@@ -7,9 +7,12 @@
         xmlns:local="clr-namespace:ProyectotTUSBOLETOS.Vistas"
         mc:Ignorable="d"
         Title="Vendedor" Height="450" Width="800">
-    <Grid Background="#FFC1C9C1">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\avion.png" AlignmentY="Top" AlignmentX="Center"/>
+        </Grid.Background>
         <Label x:Name="lblBienvenida" Content="Bienvenido Vendedor" HorizontalAlignment="Left" Margin="180,23,0,0" VerticalAlignment="Top" FontSize="50"/>
-        <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="175,110,52,76" Background="#FFB4BDD6">
+        <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="175,110,52,76" Background="#FF83D4EF">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding PkEvento}" />
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
@@ -32,8 +35,8 @@
         <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="18,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Label x:Name="lblCantidad" Content="Cantidad" HorizontalAlignment="Left" Margin="18,104,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
         <Label x:Name="lblPrecio" Content="Precio" HorizontalAlignment="Left" Margin="18,153,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-        <Button x:Name="btnCalcular" Content="Calcular" HorizontalAlignment="Left" Margin="10,221,0,0" VerticalAlignment="Top" Width="60" Click="btnCalcular_Click" Background="#FF5BD07B" BorderBrush="#FF2B2A2A" FontWeight="Bold" FontSize="14" Height="28"/>
-        <Button x:Name="btnEmitir" Content="Ordenar" HorizontalAlignment="Left" Margin="81,221,0,0" VerticalAlignment="Top" Width="65" Click="btnEmitir_Click" FontWeight="Bold" FontSize="14" Height="26" BorderBrush="#FF161616" Background="#FF84A8BD"/>
+        <Button x:Name="btnCalcular" Content="Calcular" HorizontalAlignment="Left" Margin="10,221,0,0" VerticalAlignment="Top" Width="60" Click="btnCalcular_Click" Background="#FF367BEB" BorderBrush="#FF2B2A2A" FontWeight="Bold" FontSize="14" Height="28"/>
+        <Button x:Name="btnEmitir" Content="Ordenar" HorizontalAlignment="Left" Margin="81,221,0,0" VerticalAlignment="Top" Width="65" Click="btnEmitir_Click" FontWeight="Bold" FontSize="14" Height="26" BorderBrush="#FF161616" Background="#FF367BEB"/>
         <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="60,44,0,0" VerticalAlignment="Top" Width="36" Height="35" Click="back_Click" BorderThickness="0,0,0,0">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\avi.png"/>

@@ -9,12 +9,15 @@
         Title="Ventas" Height="450" Width="800">
 
     <Grid>
-        <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="54" Height="34" Click="back_Click" BorderBrush="{x:Null}">
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\avion.png" AlignmentY="Top" AlignmentX="Center"/>
+        </Grid.Background>
+        <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="back_Click" BorderBrush="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\izquierda.png"/>
+                <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\avi.png"/>
             </Button.Background>
         </Button>
-        <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="10,49,10,137" Background="#FFB4BDD6">
+        <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="10,49,10,137" Background="#FF83D4EF">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="PkVenta" Binding="{Binding PkVenta}" />
                 <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad}" />
@@ -26,7 +29,7 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <Grid Background="AntiqueWhite" Margin="10,302,10,10">
+        <Grid Background="#FF358FAE" Margin="10,302,10,10">
             <Label Content="Total Vendido:" HorizontalAlignment="Left" Margin="255,0,0,0" VerticalAlignment="Center" FontSize="20"/>
             <Label Content="$" HorizontalAlignment="Left" Margin="395,0,0,0" VerticalAlignment="Center" FontSize="20"/>
             <Label x:Name="lblTotal" Content="Label" HorizontalAlignment="Left" Margin="416,0,0,0" VerticalAlignment="Center" FontSize="20"/>
