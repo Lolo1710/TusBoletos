@@ -16,12 +16,12 @@
         </Button>
         <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="10,49,10,137" Background="#FFB4BDD6">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding PkVenta}" />
-                <DataGridTextColumn Header="Nombre" Binding="{Binding Cantidad}" />
-                <DataGridTextColumn Header="Descripcion" Binding="{Binding Total}" />
-                <DataGridTextColumn Header="Asientos" Binding="{Binding Fecha}" />
-                <DataGridTextColumn Header="Fecha" Binding="{Binding FkEvento.Nombre}" />
-                <DataGridTextColumn Header="Precio" Binding="{Binding FkUsuario.Nombre}" />
+                <DataGridTextColumn Header="PkVenta" Binding="{Binding PkVenta}" />
+                <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad}" />
+                <DataGridTextColumn Header="Total" Binding="{Binding Total}" />
+                <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" />
+                <DataGridTextColumn Header="FkEvento" Binding="{Binding FkEvento.Nombre}" />
+                <DataGridTextColumn Header="FkUsuario" Binding="{Binding FkUsuario.Nombre}" />
 
             </DataGrid.Columns>
 
