@@ -9,13 +9,27 @@
         Title="Ventas" Height="450" Width="800">
 
     <Grid>
-        <Grid Margin="0,0,400,217" Width="400">
-            <lvc:CartesianChart Series="{Binding SeriesCollection}" Margin="0,94,-399,-209" />
-        </Grid>
-        <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="81,35,0,0" VerticalAlignment="Top" Width="54" Height="34" Click="back_Click">
+        <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="54" Height="34" Click="back_Click" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\izquierda.png"/>
             </Button.Background>
         </Button>
+        <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="10,49,10,137" Background="#FFB4BDD6">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding PkVenta}" />
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Cantidad}" />
+                <DataGridTextColumn Header="Descripcion" Binding="{Binding Total}" />
+                <DataGridTextColumn Header="Asientos" Binding="{Binding Fecha}" />
+                <DataGridTextColumn Header="Fecha" Binding="{Binding FkEvento.Nombre}" />
+                <DataGridTextColumn Header="Precio" Binding="{Binding FkUsuario.Nombre}" />
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Grid Background="AntiqueWhite" Margin="10,302,10,10">
+            <Label Content="Total Vendido:" HorizontalAlignment="Left" Margin="255,0,0,0" VerticalAlignment="Center" FontSize="20"/>
+            <Label Content="$" HorizontalAlignment="Left" Margin="395,0,0,0" VerticalAlignment="Center" FontSize="20"/>
+            <Label x:Name="lblTotal" Content="Label" HorizontalAlignment="Left" Margin="416,0,0,0" VerticalAlignment="Center" FontSize="20"/>
+        </Grid>
     </Grid>
 </Window>
