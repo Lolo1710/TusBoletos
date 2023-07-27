@@ -83,7 +83,7 @@ namespace ProyectotTUSBOLETOS.Services
 
         public string Saludo()
         {
-            string texto = $"Bienvenid@ ";
+            string texto = $"Bienvenido ";
             return texto;
         }
     }
