@@ -64,5 +64,19 @@ namespace ProyectotTUSBOLETOS
                 txtUserName.Clear();
             }
         }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+             TextBoxContrasena.Text = txtPassword.Password;
+            TextBoxContrasena.Visibility = Visibility.Visible;
+            txtPassword.Visibility = Visibility.Collapsed;
+        }
+
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            txtPassword.Password = TextBoxContrasena.Text;
+            TextBoxContrasena.Visibility = Visibility.Collapsed;
+            txtPassword.Visibility = Visibility.Visible;
+        }
     }
 }

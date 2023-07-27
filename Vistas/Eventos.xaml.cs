@@ -127,5 +127,9 @@ namespace ProyectotTUSBOLETOS.Vistas
             this.Close();
         }
 
+        private void EventTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

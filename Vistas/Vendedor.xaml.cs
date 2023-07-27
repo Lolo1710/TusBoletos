@@ -71,11 +71,35 @@ namespace ProyectotTUSBOLETOS.Vistas
             txtCantidad.Clear();
             txtPrecio.Clear();
         }
+        public void ventacompleta()
+        {
+            MessageBox.Show("Se registro la venta correctamente");
+        }
+
+        public void ventaincompleta()
+        {
+            MessageBox.Show("No hay suficientes asientos para realizar la venta");
+        }
+
+        public void sinAsientos()
+        {
+            MessageBox.Show("No quedan asientos disponibles");
+        }
         private void back_Click(object sender, RoutedEventArgs e)
         {
             Gerente gerente = new Gerente();
             gerente.Show();
             this.Close();
+        }
+
+        private void Eventos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

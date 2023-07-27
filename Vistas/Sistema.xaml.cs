@@ -115,5 +115,10 @@ namespace ProyectotTUSBOLETOS.Vistas
             gerente.Show();
             this.Close();
         }
+
+        private void UserTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -24,7 +24,7 @@
         <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="24" Margin="50,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Grid.Row="1"/>
         <Button x:Name="BtnAdd" Content="Guardar" HorizontalAlignment="Left" Height="23" Margin="67,202,0,0" VerticalAlignment="Top" Width="68" Background="#FF367BEB" Click="BtnAdd_Click" FontFamily="Arial Black" Grid.Row="1" BorderBrush="#FF1F1E1E" BorderThickness="2,2,2,2"/>
 
-        <DataGrid x:Name="UserTable"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="175,110,52,76" Grid.RowSpan="2" Background="#FF83D4EF" Foreground="Black">
+        <DataGrid x:Name="UserTable"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="175,110,52,76" Grid.RowSpan="2" Background="#FF83D4EF" Foreground="Black" SelectionChanged="UserTable_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding PkUsuario}" />
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />

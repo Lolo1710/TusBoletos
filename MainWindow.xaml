@@ -23,6 +23,9 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <CheckBox Content="Mostrar Password" HorizontalAlignment="Left" Margin="380,255,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+        <TextBox x:Name="TextBoxContrasena" FontSize="15" HorizontalAlignment="Left" Height="20" Margin="380,230,0,0" VerticalAlignment="Top" Width="120" Visibility="Collapsed"/>
+
 
     </Grid>
 </Window>

@@ -12,7 +12,7 @@
             <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\avion.png" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
         <Label x:Name="lblBienvenida" Content="Bienvenido Vendedor" HorizontalAlignment="Left" Margin="180,23,0,0" VerticalAlignment="Top" FontSize="50"/>
-        <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="175,110,52,76" Background="#FF83D4EF">
+        <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="175,110,52,76" Background="#FF83D4EF" SelectionChanged="Eventos_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding PkEvento}" />
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
@@ -31,7 +31,7 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <TextBox x:Name="txtCantidad" HorizontalAlignment="Left" Margin="18,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCantidad" HorizontalAlignment="Left" Margin="18,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtCantidad_TextChanged"/>
         <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="18,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Label x:Name="lblCantidad" Content="Cantidad" HorizontalAlignment="Left" Margin="18,104,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
         <Label x:Name="lblPrecio" Content="Precio" HorizontalAlignment="Left" Margin="18,153,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>

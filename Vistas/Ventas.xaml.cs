@@ -50,5 +50,10 @@ namespace ProyectotTUSBOLETOS.Vistas
             gerente.Show();
             this.Close();
         }
+
+        private void Eventos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -17,7 +17,7 @@
                 <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\avi.png"/>
             </Button.Background>
         </Button>
-        <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="10,49,10,137" Background="#FF83D4EF">
+        <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="10,49,10,137" Background="#FF83D4EF" SelectionChanged="Eventos_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="PkVenta" Binding="{Binding PkVenta}" />
                 <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad}" />

@@ -51,5 +51,12 @@ namespace ProyectotTUSBOLETOS.Vistas
             gerente.Show();
             this.Close();
         }
+
+        private void btnCerrar_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow ejecutar = new MainWindow();
+            ejecutar.Show();
+            Close();
+        }
     }
 }

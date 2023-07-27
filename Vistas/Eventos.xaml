@@ -25,7 +25,7 @@
             <Label Content="Fecha" HorizontalAlignment="Left" Margin="16,216,0,0" VerticalAlignment="Top"/>
             <DatePicker x:Name="dateInput" Margin="0,243,10,0" VerticalAlignment="Top"/>
         </Grid>
-        <DataGrid x:Name="EventTable"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="217,112,10,56" Background="#FF83D4EF">
+        <DataGrid x:Name="EventTable"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="217,112,10,56" Background="#FF83D4EF" SelectionChanged="EventTable_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding PkEvento}" />
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
