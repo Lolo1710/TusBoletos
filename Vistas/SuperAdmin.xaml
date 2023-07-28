@@ -8,13 +8,11 @@
         Title="SuperAdmin" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="\Img\fondo.jpg" AlignmentY="Top" AlignmentX="Center"/>
+            <ImageBrush ImageSource="\Img\Admi.jpg" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
-        <Label x:Name="lblBienvenida" Content="Bienvenido Admin" HorizontalAlignment="Left" Margin="64,12,0,0" VerticalAlignment="Top" FontSize="72" FontFamily="Segoe UI Variable Text Semibold"/>
-        <Button x:Name="btnAddUSer" Content="Añadir Usuarios" HorizontalAlignment="Left" Margin="64,203,0,0" VerticalAlignment="Top" Click="btnAddUSer_Click" Height="57" Width="138" FontSize="18" FontWeight="Bold"/>
-        <Button x:Name="btnAddEventos" Content="Añadir Eventos" HorizontalAlignment="Left" Margin="400,203,0,0" VerticalAlignment="Top" Height="57" Width="140" FontSize="18" FontWeight="Bold" Click="btnAddEventos_Click"/>
-        <Button x:Name="btnVentas" Content="Ventas" HorizontalAlignment="Left" Margin="619,203,0,0" VerticalAlignment="Top" Height="57" Width="99" FontSize="18" FontWeight="Bold" Click="btnVentas_Click"/>
-        <Button x:Name="btnAddRoles" Content="Añadir Roles" HorizontalAlignment="Left" Margin="231,203,0,0" VerticalAlignment="Top" Click="btnAddRoles_Click" Height="57" Width="138" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="lblBienvenida" Content="Bienvenido     Admin" HorizontalAlignment="Left" Margin="47,10,0,0" VerticalAlignment="Top" FontSize="72" FontFamily="Segoe UI Variable Text Semibold"/>
+        <Button x:Name="btnAddRoles" Content="Añadir Roles" HorizontalAlignment="Left" Margin="359,203,0,0" VerticalAlignment="Top" Click="btnAddRoles_Click" Height="57" Width="138" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.932,0.523" Background="#FF367BEB"/>
+        <Button x:Name="btnCerrar" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="328,334,0,0" VerticalAlignment="Top" Height="51" Width="200" Click="btnCerrar_Click" Background="#FF367BEB" FontSize="14" FontWeight="Bold"/>
 
 
     </Grid>

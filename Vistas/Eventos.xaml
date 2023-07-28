@@ -8,7 +8,7 @@
         Title="Eventos" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\avion.png" AlignmentY="Top" AlignmentX="Center"/>
+            <ImageBrush ImageSource="\Img\p.jpg" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
 
         <Label Content="Eventos" HorizontalAlignment="Left" Margin="353,16,0,0" VerticalAlignment="Top" FontSize="50"/>
@@ -51,11 +51,10 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="10,363,0,0" VerticalAlignment="Top" Height="30" Width="81" Click="btnLimpiar_Click" Background="#FF367BEB" BorderBrush="#FF141313" BorderThickness="2,2,2,2"/>
-        <Button x:Name="btnAdd" Content="Guardar" HorizontalAlignment="Left" Margin="96,363,0,0" VerticalAlignment="Top" Height="30" Width="86" Click="btnAdd_Click" Background="#FF367BEB" BorderBrush="#FF0E0E0E" BorderThickness="2,2,2,1"/>
+        <Button x:Name="btnAdd" Content="Guardar" HorizontalAlignment="Left" Margin="53,365,0,0" VerticalAlignment="Top" Height="30" Width="86" Click="btnAdd_Click" Background="#FF367BEB" BorderBrush="#FF0E0E0E" BorderThickness="2,2,2,1"/>
         <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="182,10,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="back_Click" BorderBrush="#FFAFF4D9" BorderThickness="0,0,0,0">
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\avi.png"/>
+                <ImageBrush ImageSource="\Img\avi.png"/>
             </Button.Background>
         </Button>
     </Grid>

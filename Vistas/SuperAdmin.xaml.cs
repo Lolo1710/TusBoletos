@@ -23,28 +23,12 @@ namespace ProyectotTUSBOLETOS.Vistas
         {
             InitializeComponent();
         }
-
-        private void btnAddUSer_Click(object sender, RoutedEventArgs e)
+        private void btnCerrar_Click(object sender, RoutedEventArgs e)
         {
-            Sistema sistema = new Sistema();
+            MainWindow ejecutar = new MainWindow();
+            ejecutar.Show();
             Close();
-            sistema.Show();
         }
-
-        private void btnAddEventos_Click(object sender, RoutedEventArgs e)
-        {
-            Eventos evento = new Eventos();
-            Close();
-            evento.Show();
-        }
-
-        private void btnVentas_Click(object sender, RoutedEventArgs e)
-        {
-            Ventas venta = new Ventas();
-            Close();
-            venta.Show();
-        }
-
         private void btnAddRoles_Click(object sender, RoutedEventArgs e)
         {
             Roles roles = new Roles();
@@ -53,4 +37,3 @@ namespace ProyectotTUSBOLETOS.Vistas
         }
     }
 }
-

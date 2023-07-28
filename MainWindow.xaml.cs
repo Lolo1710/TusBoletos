@@ -46,6 +46,12 @@ namespace ProyectotTUSBOLETOS
             {
                 if (response.Roles.Nombre == "Super Admin")
                 {
+                    SuperAdmin inicio = new SuperAdmin();
+                    Close();
+                    inicio.Show();
+                }
+                else if (response.Roles.Nombre == "Gerente")
+                {
                     Gerente inicio = new Gerente();
                     Close();
                     inicio.Show();

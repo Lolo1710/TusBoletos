@@ -4,7 +4,7 @@ using MySql.EntityFrameworkCore.Metadata;
 
 namespace ProyectotTUSBOLETOS.Migrations
 {
-    public partial class example : Migration
+    public partial class loool : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

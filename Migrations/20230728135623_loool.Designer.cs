@@ -9,8 +9,8 @@ using ProyectotTUSBOLETOS.Context;
 namespace ProyectotTUSBOLETOS.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230727021936_example")]
-    partial class example
+    [Migration("20230728135623_loool")]
+    partial class loool
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

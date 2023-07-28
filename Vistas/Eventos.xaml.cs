@@ -29,9 +29,9 @@ namespace ProyectotTUSBOLETOS.Vistas
             GetUserTable();
         }
 
-        AdminServices eventos = new AdminServices();
+        EventosServices eventos = new EventosServices();
 
-        private void btnLimpiar_Click(object sender, RoutedEventArgs e)
+        private void Limpiar()
         {
             txtID.Clear();
             txtNombre.Clear();
@@ -44,46 +44,42 @@ namespace ProyectotTUSBOLETOS.Vistas
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             Evento evento = new Evento();
-            if (txtID.Text == "")
+            if (!string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtDescripcion.Text) && !string.IsNullOrEmpty(txtAsientos.Text) && !string.IsNullOrEmpty(txtPrecio.Text) && dateInput.SelectedDate != null)
             {
-                evento.Nombre = txtNombre.Text;
-                evento.Descripcion = txtDescripcion.Text;
-                evento.Asientos = int.Parse(txtAsientos.Text);
-                evento.Fecha = dateInput.SelectedDate.Value;
-                evento.Precio = int.Parse(txtPrecio.Text);
-                eventos.AddEvent(evento);
+                if (txtID.Text == "")
+                {
+                    evento.Nombre = txtNombre.Text;
+                    evento.Descripcion = txtDescripcion.Text;
+                    evento.Asientos = int.Parse(txtAsientos.Text);
+                    evento.Fecha = dateInput.SelectedDate.Value;
+                    evento.Precio = int.Parse(txtPrecio.Text);
+                    eventos.AddEvent(evento);
 
-                txtID.Clear();
-                txtNombre.Clear();
-                txtDescripcion.Clear();
-                txtAsientos.Clear();
-                txtPrecio.Clear();
-                dateInput.SelectedDate = null;
+                    Limpiar();
 
-                MessageBox.Show("Se agrego correctamente");
-                GetUserTable();
+                    MessageBox.Show("Se agrego correctamente");
+                    GetUserTable();
+                }
+                else
+                {
+                    evento.PkEvento = int.Parse(txtID.Text);
+                    evento.Nombre = txtNombre.Text;
+                    evento.Descripcion = txtDescripcion.Text;
+                    evento.Fecha = dateInput.SelectedDate.Value;
+                    evento.Asientos = int.Parse(txtAsientos.Text);
+                    evento.Precio = decimal.Parse(txtPrecio.Text);
+
+                    eventos.UpdateEvent(evento);
+
+                    Limpiar();
+
+                    MessageBox.Show("Se actualizo correctamente");
+                    GetUserTable();
+                }
             }
-
             else
             {
-                evento.PkEvento = int.Parse(txtID.Text);
-                evento.Nombre = txtNombre.Text;
-                evento.Descripcion = txtDescripcion.Text;
-                evento.Fecha = dateInput.SelectedDate.Value;
-                evento.Asientos = int.Parse(txtAsientos.Text);
-                evento.Precio = decimal.Parse(txtPrecio.Text);
-
-                eventos.UpdateEvent(evento);
-
-                txtID.Clear();
-                txtNombre.Clear();
-                txtDescripcion.Clear();
-                dateInput.SelectedDate = null;
-                txtAsientos.Clear();
-                txtPrecio.Clear();
-
-                MessageBox.Show("Se actualizo correctamente");
-                GetUserTable();
+                MessageBox.Show("Faltan datos por agregar");
             }
         }
 
@@ -110,7 +106,7 @@ namespace ProyectotTUSBOLETOS.Vistas
             using (var _context = new ApplicationDbContext())
             {
                 Evento evento = new Evento();
-                AdminServices services = new AdminServices();
+                EventosServices services = new EventosServices();
                 evento = (sender as FrameworkElement).DataContext as Evento;
                 evento.PkEvento.ToString();
                 services.DeleteEvent(evento);

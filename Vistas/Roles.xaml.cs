@@ -23,7 +23,7 @@ namespace ProyectotTUSBOLETOS.Vistas
     /// </summary>
     public partial class Roles : Window
     {
-        //RolesServices services = new RolesServices();
+        RolesServices services = new RolesServices();
         public Roles()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace ProyectotTUSBOLETOS.Vistas
 
         public void GetRolesTable()
         {
-            //UserTable.ItemsSource = services.GetRoles();
+            UserTable.ItemsSource = services.GetRoles();
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
@@ -43,7 +43,7 @@ namespace ProyectotTUSBOLETOS.Vistas
             {
                 roles.Nombre = txtNombre.Text;
 
-                //services.AddRoles(roles);
+                services.AddRoles(roles);
 
                 txtNombre.Clear();
 
@@ -56,7 +56,7 @@ namespace ProyectotTUSBOLETOS.Vistas
                 roles.PkRol = int.Parse(txtPkUser.Text);
                 roles.Nombre = txtNombre.Text;
 
-                //services.UpdateRol(roles);
+                services.UpdateRol(roles);
 
                 txtPkUser.Clear();
                 txtNombre.Clear();
@@ -79,10 +79,10 @@ namespace ProyectotTUSBOLETOS.Vistas
         private void ElimiarItem(object sender, RoutedEventArgs e)
         {
             Rol rol = new Rol();
-            Roles services = new Roles();
+            RolesServices services = new RolesServices();
             rol = (sender as FrameworkElement).DataContext as Rol;
             rol.PkRol.ToString();
-            //services.DeleteRol(rol);
+            services.DeleteRol(rol);
 
             MessageBox.Show("Se elimino el usuario");
             GetRolesTable();
@@ -94,5 +94,11 @@ namespace ProyectotTUSBOLETOS.Vistas
             txtNombre.Clear();
         }
 
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            SuperAdmin admin = new SuperAdmin();
+            admin.Show();
+            this.Close();
+        }
     }
 }

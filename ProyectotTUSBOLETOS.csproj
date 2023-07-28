@@ -8,13 +8,57 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Img\Admi.jpg" />
+    <None Remove="Img\Av.jpg" />
+    <None Remove="Img\avi.png" />
+    <None Remove="Img\avion.png" />
     <None Remove="Img\fondo.jpg" />
-    <None Remove="Vistas\izquierda.png" />
+    <None Remove="Img\Ge.jpg" />
+    <None Remove="Img\Gerente.jpg" />
+    <None Remove="Img\ima.png" />
+    <None Remove="Img\izquierda.png" />
+    <None Remove="Img\mov.jpg" />
+    <None Remove="Img\p.jpg" />
+    <None Remove="Img\r.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Img\fondo.jpg" />
-    <Resource Include="Vistas\izquierda.png" />
+    <Resource Include="Img\Admi.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\Av.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\avi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\avion.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\fondo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\Ge.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\Gerente.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\ima.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\izquierda.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\mov.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\p.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\r.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>

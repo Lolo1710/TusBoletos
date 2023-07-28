@@ -66,7 +66,7 @@ namespace ProyectotTUSBOLETOS.Vistas
             int cantidad = int.Parse(txtCantidad.Text);
             vendedor.Ordenar(IDEvento, cantidad, total);
 
-            MessageBox.Show("Se registro la venta correctamente");
+            GetUserTable();
 
             txtCantidad.Clear();
             txtPrecio.Clear();
@@ -87,8 +87,8 @@ namespace ProyectotTUSBOLETOS.Vistas
         }
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            Gerente gerente = new Gerente();
-            gerente.Show();
+            MainWindow vendedor = new MainWindow ();
+            vendedor.Show();
             this.Close();
         }
 

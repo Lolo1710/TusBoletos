@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProyectotTUSBOLETOS.Services
 {
-    class AdminServices
+    class EventosServices
     {
 
         public List<Evento> GetEventos()
@@ -57,7 +57,7 @@ namespace ProyectotTUSBOLETOS.Services
             catch (Exception ex)
             {
 
-                throw new Exception("Succedio un erro " + ex.Message);
+                throw new Exception("Succedio un error " + ex.Message);
             }
 
         }

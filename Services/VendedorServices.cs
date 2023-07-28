@@ -1,5 +1,6 @@
 ﻿using ProyectotTUSBOLETOS.Context;
 using ProyectotTUSBOLETOS.Entities;
+using ProyectotTUSBOLETOS.Vistas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,17 +58,39 @@ namespace ProyectotTUSBOLETOS.Services
             {
                 using (var _context = new ApplicationDbContext())
                 {
+                    EventosServices eventos = new EventosServices();
                     Venta venta = new Venta();
                     Evento evento = new Evento();
-                    evento = _context.Eventos.Find(IDEvento);
-                    venta.Cantidad = cantidad;
-                    venta.Total = total;
-                    venta.Fecha = DateTime.Now;
-                    venta.FkEvento = IDEvento;
-                    venta.FkUsuario = user.PkUsuario;
+                    Vendedor vendedor = new Vendedor();
 
-                    _context.Ventas.Add(venta);
-                    _context.SaveChanges();
+                    evento = _context.Eventos.Find(IDEvento);
+
+                    if (cantidad <= evento.Asientos)
+                    {
+                        if (cantidad == 0)
+                        {
+                            vendedor.sinAsientos();
+                        }
+                        else
+                        {
+                            venta.Cantidad = cantidad;
+                            venta.Total = total;
+                            venta.Fecha = DateTime.Now;
+                            venta.FkEvento = IDEvento;
+
+                            _context.Ventas.Add(venta);
+                            _context.SaveChanges();
+
+                            evento.Asientos = evento.Asientos - cantidad;
+                            eventos.UpdateEvent(evento);
+
+                            vendedor.ventacompleta();
+                        }
+                    }
+                    else
+                    {
+                        vendedor.ventaincompleta();
+                    }
                 }
             }
             catch (Exception ex)

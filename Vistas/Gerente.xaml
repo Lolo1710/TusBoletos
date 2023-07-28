@@ -6,12 +6,14 @@
         xmlns:local="clr-namespace:ProyectotTUSBOLETOS.Vistas"
         mc:Ignorable="d"
         Title="Gerente" Height="450" Width="800">
-    <Grid Width="850" Height="500" VerticalAlignment="Top" Opacity="0.8" HorizontalAlignment="Center">
+    <Grid Width="800" Height="440" VerticalAlignment="Top" Opacity="0.8" HorizontalAlignment="Center">
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\ima.png" AlignmentY="Top" AlignmentX="Center"/>
+            <ImageBrush ImageSource="\Img\Gerente.jpg" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
+
+
         <Label x:Name="lblBienvenida" Content="Bienvenido Gerente" HorizontalAlignment="Left" Margin="92,0,0,0" VerticalAlignment="Top" FontSize="72" FontFamily="Segoe UI Variable Text Semibold"/>
-        <Button x:Name="btnAddUSer" Content="Añadir Usuarios" HorizontalAlignment="Left" Margin="92,277,0,0" VerticalAlignment="Top" Click="btnAddUSer_Click" Height="56" Width="153" FontSize="18" FontWeight="Bold" BorderBrush="#FF121212" BorderThickness="2,2,2,2">
+        <Button x:Name="btnAddUSer" Content="Añadir Usuarios" HorizontalAlignment="Left" Margin="31,222,0,0" VerticalAlignment="Top" Click="btnAddUSer_Click" Height="56" Width="153" FontSize="18" FontWeight="Bold" BorderBrush="#FF121212" BorderThickness="2,2,2,2">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF59E7E3"/>
@@ -19,7 +21,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btnAddEventos" Content="Añadir Eventos" HorizontalAlignment="Left" Margin="349,276,0,0" VerticalAlignment="Top" Height="57" Width="140" FontSize="18" FontWeight="Bold" Click="btnAddEventos_Click" BorderBrush="#FF131313" BorderThickness="2,2,2,2">
+        <Button x:Name="btnAddEventos" Content="Añadir Eventos" HorizontalAlignment="Left" Margin="207,220,0,0" VerticalAlignment="Top" Height="57" Width="140" FontSize="18" FontWeight="Bold" Click="btnAddEventos_Click" BorderBrush="#FF131313" BorderThickness="2,2,2,2">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF69E6DE"/>
@@ -28,7 +30,9 @@
             </Button.Background>
         </Button>
         <Button Content="Button" HorizontalAlignment="Left" Margin="998,292,0,0" VerticalAlignment="Top" Width="0"/>
-        <Button x:Name="btnVentas" Content="Ventas" HorizontalAlignment="Left" Margin="594,277,0,0" VerticalAlignment="Top" Height="57" Width="99" FontSize="18" FontWeight="Bold" Click="btnVentas_Click" BorderBrush="#FF1A1A1A" BorderThickness="2,2,2,2">
+
+
+        <Button x:Name="btnVentas" Content="Ventas" HorizontalAlignment="Left" Margin="369,222,0,0" VerticalAlignment="Top" Height="55" Width="100" FontSize="18" FontWeight="Bold" Click="btnVentas_Click" BorderBrush="#FF1A1A1A" BorderThickness="2,2,2,2">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF63D2E2"/>
@@ -37,7 +41,7 @@
             </Button.Background>
 
         </Button>
-        <Button x:Name="btnCerrar" Content="Cerrar sesión" HorizontalAlignment="Left" Margin="349,365,0,0" VerticalAlignment="Top" Height="48" Width="140" BorderBrush="#FF272727" FontSize="18" FontWeight="Bold" BorderThickness="2,2,2,2" Click="btnCerrar_Click">
+        <Button x:Name="btnCerrar" Content="Cerrar sesión" HorizontalAlignment="Left" Margin="192,302,0,0" VerticalAlignment="Top" Height="52" Width="155" BorderBrush="#FF272727" FontSize="18" FontWeight="Bold" BorderThickness="2,2,2,2" Click="btnCerrar_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF63D2E2"/>

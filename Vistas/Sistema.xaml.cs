@@ -71,6 +71,8 @@ namespace ProyectotTUSBOLETOS.Vistas
                 GetUserTable();
             }
         }
+    
+        
 
         public void GetUserTable()
         {

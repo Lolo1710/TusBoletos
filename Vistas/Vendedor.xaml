@@ -9,7 +9,7 @@
         Title="Vendedor" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\avion.png" AlignmentY="Top" AlignmentX="Center"/>
+            <ImageBrush ImageSource="\Img\avion.png" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
         <Label x:Name="lblBienvenida" Content="Bienvenido Vendedor" HorizontalAlignment="Left" Margin="180,23,0,0" VerticalAlignment="Top" FontSize="50"/>
         <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="175,110,52,76" Background="#FF83D4EF" SelectionChanged="Eventos_SelectionChanged">
@@ -39,7 +39,7 @@
         <Button x:Name="btnEmitir" Content="Ordenar" HorizontalAlignment="Left" Margin="81,221,0,0" VerticalAlignment="Top" Width="65" Click="btnEmitir_Click" FontWeight="Bold" FontSize="14" Height="26" BorderBrush="#FF161616" Background="#FF367BEB"/>
         <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="60,44,0,0" VerticalAlignment="Top" Width="36" Height="35" Click="back_Click" BorderThickness="0,0,0,0">
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\avi.png"/>
+                <ImageBrush ImageSource="\Img\avi.png"/>
             </Button.Background>
         </Button>
     </Grid>

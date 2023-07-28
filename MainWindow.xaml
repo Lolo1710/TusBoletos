@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectotTUSBOLETOS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="600" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+        Title="Inicio de Sesion" Height="450" Width="600" HorizontalAlignment="Center" Icon="\Img\Av.jpg" VerticalAlignment="Bottom">
     <Grid Width="500" HorizontalAlignment="Left" Height="400" Margin="0,17,0,17">
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\luzac\source\repos\ProyectotTUSBOLETOS\Img\r.png" AlignmentY="Top" AlignmentX="Center"/>
+            <ImageBrush ImageSource="\Img\r.png" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
         <Label FontSize="30" Content="TUS BOLETOS" HorizontalAlignment="Left" Height="80" Margin="168,24,0,0" VerticalAlignment="Top" Width="508" HorizontalContentAlignment="Center" Background="{x:Null}" FontFamily="Impact"/>
         <Label x:Name="txtUsuario" FontSize="15" Content="Usuario" HorizontalAlignment="Left" Height="26" Margin="399,104,0,0" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center" FontWeight="Bold"/>
@@ -23,7 +23,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <CheckBox Content="Mostrar Password" HorizontalAlignment="Left" Margin="380,255,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+        <CheckBox Content="Mostrar Password" HorizontalAlignment="Left" Margin="380,255,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" FontWeight="Bold"/>
         <TextBox x:Name="TextBoxContrasena" FontSize="15" HorizontalAlignment="Left" Height="20" Margin="380,230,0,0" VerticalAlignment="Top" Width="120" Visibility="Collapsed"/>
 
 

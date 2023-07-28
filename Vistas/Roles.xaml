@@ -8,15 +8,15 @@
         Title="Roles" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="\Img\fondo.jpg" AlignmentY="Top" AlignmentX="Center"/>
+            <ImageBrush ImageSource="\Img\avion.png" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
 
         <Label FontSize="50" Content="Roles" HorizontalAlignment="Left" Height="67" Margin="331,16,0,0" VerticalAlignment="Top" Width="234" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="Nombre" HorizontalAlignment="Left" Height="34" Margin="50,218,0,0" VerticalAlignment="Top" Width="102" FontFamily="Arial Black"/>
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="19" Margin="50,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
-        <Button x:Name="BtnAdd" Content="Guardar" HorizontalAlignment="Left" Height="23" Margin="67,275,0,0" VerticalAlignment="Top" Width="68" Background="#FF96E486" Click="BtnAdd_Click" FontFamily="Arial Black"/>
+        <Button x:Name="BtnAdd" Content="Guardar" HorizontalAlignment="Left" Height="23" Margin="67,275,0,0" VerticalAlignment="Top" Width="68" Background="#FF367BEB" Click="BtnAdd_Click" FontFamily="Arial Black"/>
 
-        <DataGrid x:Name="UserTable"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="175,110,52,76">
+        <DataGrid x:Name="UserTable"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="175,110,52,76" Background="#FF83D4EF">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding PkRol}" />
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
@@ -39,7 +39,11 @@
 
         </DataGrid>
         <TextBox x:Name="txtPkUser" HorizontalAlignment="Left" Height="18" Margin="50,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" IsEnabled="False"/>
-        <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="67,303,0,0" VerticalAlignment="Top" Width="68" Click="btnLimpiar_Click"/>
-
+        <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="67,303,0,0" VerticalAlignment="Top" Width="68" Click="btnLimpiar_Click" Background="#FF367BEB" FontWeight="Bold" FontSize="14"/>
+        <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="81,35,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="back_Click" BorderThickness="0,0,0,0">
+            <Button.Background>
+                <ImageBrush ImageSource="\Img\avi.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

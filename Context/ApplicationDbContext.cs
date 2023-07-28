@@ -12,7 +12,7 @@ namespace ProyectotTUSBOLETOS.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseMySQL("Server=localhost; database=test1; user=root; password =");
+            options.UseMySQL("Server=localhost; database=proyectoMajot; user=root; password =");
         }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Rol> Roles { get; set; }
