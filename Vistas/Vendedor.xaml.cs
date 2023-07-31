@@ -56,20 +56,34 @@ namespace ProyectotTUSBOLETOS.Vistas
 
         private void btnCalcular_Click(object sender, RoutedEventArgs e)
         {
-            int cantidad = int.Parse(txtCantidad.Text);
-            total = vendedor.Calcular(IDEvento, cantidad);
-            txtPrecio.Text = total.ToString();
+            if (!string.IsNullOrEmpty(txtCantidad.Text) && !string.IsNullOrEmpty(txtPrecio.Text))
+            {
+                int cantidad = int.Parse(txtCantidad.Text);
+                total = vendedor.Calcular(IDEvento, cantidad);
+                txtPrecio.Text = total.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Faltan datos por agregar");
+            }
         }
 
         private void btnEmitir_Click(object sender, RoutedEventArgs e)
         {
-            int cantidad = int.Parse(txtCantidad.Text);
-            vendedor.Ordenar(IDEvento, cantidad, total);
+            if (!string.IsNullOrEmpty(txtCantidad.Text) && !string.IsNullOrEmpty(txtPrecio.Text))
+            {
+                int cantidad = int.Parse(txtCantidad.Text);
+                vendedor.Ordenar(IDEvento, cantidad, total);
 
-            GetUserTable();
+                GetUserTable();
 
-            txtCantidad.Clear();
-            txtPrecio.Clear();
+                txtCantidad.Clear();
+                txtPrecio.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Faltan datos por agregar");
+            }
         }
         public void ventacompleta()
         {

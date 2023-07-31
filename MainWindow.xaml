@@ -49,9 +49,9 @@
                 </TextBox>
 
                 <Label FontSize="15" Content="Password" HorizontalAlignment="Left" Height="28" Margin="204,0,0,0" VerticalAlignment="Center" Width="120" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#FFFCF9F9"/>
-                <PasswordBox x:Name="txtPassword" Foreground="White" CaretBrush="LightGray" BorderBrush="DarkGray" BorderThickness="0,0,0,1" FontSize="15" HorizontalAlignment="Left" Height="20" Margin="204,214,0,0" VerticalAlignment="Top" Width="120" >
+                <PasswordBox x:Name="txtPassword" Foreground="White" CaretBrush="LightGray" BorderBrush="DarkGray" BorderThickness="0,0,0,1" FontSize="15" HorizontalAlignment="Left" Height="20" Margin="208,214,0,0" VerticalAlignment="Top" Width="120" >
                     <PasswordBox.SelectionTextBrush>
-                        <SolidColorBrush Color="White" Opacity="0.5"/>
+                        <SolidColorBrush Color="Transparent" Opacity="0.5"/>
                     </PasswordBox.SelectionTextBrush>
                     <PasswordBox.Background>
                         <SolidColorBrush Color="Transparent" Opacity="0.5"/>
@@ -68,14 +68,17 @@
                 </Button>
                 <CheckBox Content="Mostrar Password" HorizontalAlignment="Left" Margin="204,239,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" FontWeight="Bold">
                     <CheckBox.Foreground>
-                        <SolidColorBrush Color="#FFFAF5F5" Opacity="1"/>
+                        <SolidColorBrush Color="White" Opacity="1"/>
                     </CheckBox.Foreground>
                     <CheckBox.Background>
                         <SolidColorBrush Color="White" Opacity="0.5"/>
                     </CheckBox.Background>
                 </CheckBox>
-                <TextBox x:Name="TextBoxContrasena" FontSize="15" HorizontalAlignment="Left" Height="20" Margin="380,230,0,0" VerticalAlignment="Top" Width="120" Visibility="Collapsed"/>
-
+                <TextBox x:Name="TextBoxContrasena"  Foreground="White" CaretBrush="LightGray" BorderBrush="DarkGray" BorderThickness="0,0,0,1"   FontSize="15" HorizontalAlignment="Left" Height="20" Margin="208,214,0,0" VerticalAlignment="Top" Width="120" Opacity="0.5" Visibility="Collapsed">
+                    <TextBox.Background>
+                        <SolidColorBrush Opacity="0.5"/>
+                    </TextBox.Background>
+                </TextBox>
 
             </Grid>
         </Border>

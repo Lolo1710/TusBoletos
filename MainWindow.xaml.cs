@@ -73,7 +73,7 @@ namespace ProyectotTUSBOLETOS
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-             TextBoxContrasena.Text = txtPassword.Password;
+            TextBoxContrasena.Text = txtPassword.Password;
             TextBoxContrasena.Visibility = Visibility.Visible;
             txtPassword.Visibility = Visibility.Collapsed;
         }

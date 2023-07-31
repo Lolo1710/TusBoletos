@@ -33,42 +33,48 @@ namespace ProyectotTUSBOLETOS.Vistas
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             Usuario usuario = new Usuario();
-
-            if (txtPkUser.Text == "")
+            if (!string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtUserName.Text) && !string.IsNullOrEmpty(txtPassword.Text) && !string.IsNullOrEmpty(SelectRol.Text))
             {
-                usuario.Nombre = txtNombre.Text;
-                usuario.UserName = txtUserName.Text;
-                usuario.Password = txtPassword.Text;
-                usuario.FkRol = int.Parse(SelectRol.SelectedValue.ToString());
+                if (txtPkUser.Text == "")
+                {
+                    usuario.Nombre = txtNombre.Text;
+                    usuario.UserName = txtUserName.Text;
+                    usuario.Password = txtPassword.Text;
+                    usuario.FkRol = int.Parse(SelectRol.SelectedValue.ToString());
 
-                services.AddUser(usuario);
+                    services.AddUser(usuario);
 
-                txtNombre.Clear();
-                txtUserName.Clear();
-                txtPassword.Clear();
+                    txtNombre.Clear();
+                    txtUserName.Clear();
+                    txtPassword.Clear();
 
-                MessageBox.Show("Se agrego correctamente");
-                GetUserTable();
+                    MessageBox.Show("Se agrego correctamente");
+                    GetUserTable();
+                }
+
+                else
+                {
+                    usuario.PkUsuario = int.Parse(txtPkUser.Text);
+                    usuario.Nombre = txtNombre.Text;
+                    usuario.UserName = txtUserName.Text;
+                    usuario.Password = txtPassword.Text;
+                    usuario.FkRol = int.Parse(SelectRol.SelectedValue.ToString());
+
+                    services.UpdateUser(usuario);
+
+                    txtPkUser.Clear();
+                    txtNombre.Clear();
+                    txtUserName.Clear();
+                    txtPassword.Clear();
+                    SelectRol.SelectedItem = null;
+
+                    MessageBox.Show("Se actualizo correctamente");
+                    GetUserTable();
+                }
             }
-
             else
             {
-                usuario.PkUsuario = int.Parse(txtPkUser.Text);
-                usuario.Nombre = txtNombre.Text;
-                usuario.UserName = txtUserName.Text;
-                usuario.Password = txtPassword.Text;
-                usuario.FkRol = int.Parse(SelectRol.SelectedValue.ToString());
-
-                services.UpdateUser(usuario);
-
-                txtPkUser.Clear();
-                txtNombre.Clear();
-                txtUserName.Clear();
-                txtPassword.Clear();
-                SelectRol.SelectedItem = null;
-
-                MessageBox.Show("Se actualizo correctamente");
-                GetUserTable();
+                MessageBox.Show("Faltan datos por agregar");
             }
         }
     

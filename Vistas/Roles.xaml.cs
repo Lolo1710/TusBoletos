@@ -38,31 +38,38 @@ namespace ProyectotTUSBOLETOS.Vistas
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             Rol roles = new Rol();
-
-            if (txtPkUser.Text == "")
+            if (!string.IsNullOrEmpty(txtNombre.Text))
             {
-                roles.Nombre = txtNombre.Text;
+                if (txtPkUser.Text == "")
+                {
+                    roles.Nombre = txtNombre.Text;
 
-                services.AddRoles(roles);
+                    services.AddRoles(roles);
 
-                txtNombre.Clear();
+                    txtNombre.Clear();
 
-                MessageBox.Show("Se agrego correctamente");
-                GetRolesTable();
+                    MessageBox.Show("Se agrego correctamente");
+                    GetRolesTable();
+                }
+
+                else
+                {
+                    roles.PkRol = int.Parse(txtPkUser.Text);
+                    roles.Nombre = txtNombre.Text;
+
+                    services.UpdateRol(roles);
+
+                    txtPkUser.Clear();
+                    txtNombre.Clear();
+
+                    MessageBox.Show("Se actualizo correctamente");
+                    GetRolesTable();
+                }
             }
-
-            else
+            else 
             {
-                roles.PkRol = int.Parse(txtPkUser.Text);
-                roles.Nombre = txtNombre.Text;
+                MessageBox.Show("Faltan datos por agregar");
 
-                services.UpdateRol(roles);
-
-                txtPkUser.Clear();
-                txtNombre.Clear();
-
-                MessageBox.Show("Se actualizo correctamente");
-                GetRolesTable();
             }
         }
 
@@ -90,8 +97,15 @@ namespace ProyectotTUSBOLETOS.Vistas
 
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
-            txtPkUser.Clear();
-            txtNombre.Clear();
+            if (!string.IsNullOrEmpty(txtNombre.Text))
+            {
+                txtPkUser.Clear();
+                txtNombre.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Faltan datos por agregar");
+            }
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
