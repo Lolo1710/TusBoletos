@@ -6,33 +6,63 @@
         xmlns:local="clr-namespace:ProyectotTUSBOLETOS.Vistas"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
-        Title="Ventas" Icon="\Img\Av.jpg" Height="450" Width="800">
+        Title="Ventas" Icon="\Img\Av.jpg" Height="450" Width="800"
+        
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True">
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="\Img\avion.png"  AlignmentY="Top" AlignmentX="Center"/>
-        </Grid.Background>
-        <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="back_Click" BorderBrush="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="\Img\avi.png"/>
-            </Button.Background>
-        </Button>
-        <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="20,49,20,137" Background="#FF83D4EF" SelectionChanged="Eventos_SelectionChanged" BorderBrush="#FF141515">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="PkVenta" Binding="{Binding PkVenta}" />
-                <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad}" />
-                <DataGridTextColumn Header="Total" Binding="{Binding Total}" />
-                <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" />
-                <DataGridTextColumn Header="FkEvento" Binding="{Binding FkEvento.Nombre}" Visibility="Collapsed" />
-                <DataGridTextColumn Header="FkUsuario" Binding="{Binding FkUsuario.Nombre}" Visibility="Collapsed" />
+    <Border CornerRadius="50">
+        <Border.Background>
+            <ImageBrush ImageSource="\Img\Avionv.jpg"
+                        Stretch="None"/>
+        </Border.Background>
+        <Border CornerRadius="50"
+                BorderThickness="5"
+                Opacity="0.87">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#462AD8" Offset="0"/>
+                    <GradientStop Color="#DA34AE" Offset="0.75" />
+                    <GradientStop Color="#8A16C1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
 
-            </DataGrid.Columns>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#060531" Offset="0"/>
+                    <GradientStop Color="#181448" Offset="0.75"/>
+                </LinearGradientBrush>
 
-        </DataGrid>
-        <Grid Background="#FF358FAE" Margin="10,302,10,10">
-            <Label Content="Total Vendido:" HorizontalAlignment="Left" Margin="255,0,0,0" VerticalAlignment="Center" FontSize="20"/>
-            <Label Content="$" HorizontalAlignment="Left" Margin="395,0,0,0" VerticalAlignment="Center" FontSize="20"/>
-            <Label x:Name="lblTotal" Content="Label" HorizontalAlignment="Left" Margin="416,0,0,0" VerticalAlignment="Center" FontSize="20"/>
-        </Grid>
-    </Grid>
+            </Border.Background>
+
+            <Grid>
+              
+                <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="38,25,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="back_Click" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Img\Flechaiz.png"/>
+                    </Button.Background>
+                </Button>
+                <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="20,65,10,137" Background="#FF2D2987" SelectionChanged="Eventos_SelectionChanged" BorderBrush="#FF141515">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="PkVenta" Binding="{Binding PkVenta}" />
+                        <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad}" />
+                        <DataGridTextColumn Header="Total" Binding="{Binding Total}" />
+                        <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" />
+                        <DataGridTextColumn Header="FkEvento" Binding="{Binding FkEvento.Nombre}" Visibility="Collapsed" />
+                        <DataGridTextColumn Header="FkUsuario" Binding="{Binding FkUsuario.Nombre}" Visibility="Collapsed" />
+
+                    </DataGrid.Columns>
+
+                </DataGrid>
+                <Grid Background="#FF3153A6" Margin="38,324,28,21">
+                    <Label Content="Total Vendido:" HorizontalAlignment="Left" Margin="255,0,0,0" VerticalAlignment="Center" FontSize="20" Foreground="#FFF7F5F5"/>
+                    <Label Content="$" HorizontalAlignment="Left" Margin="395,0,0,0" VerticalAlignment="Center" FontSize="20" Foreground="#FFF1EDED"/>
+                    <Label x:Name="lblTotal" Content="Label" HorizontalAlignment="Left" Margin="416,0,0,0" VerticalAlignment="Center" FontSize="20" Foreground="#FFFCF9F9"/>
+                </Grid>
+            </Grid>
+        </Border>
+    </Border>
 </Window>

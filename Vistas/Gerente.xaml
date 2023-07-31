@@ -5,50 +5,94 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectotTUSBOLETOS.Vistas"
         mc:Ignorable="d"
-        Title="Gerente" Height="450" Width="800">
-    <Grid Width="800" Height="440" VerticalAlignment="Top" Opacity="0.8" HorizontalAlignment="Center">
-        <Grid.Background>
-            <ImageBrush ImageSource="\Img\Gerente.jpg" AlignmentY="Top" AlignmentX="Center"/>
-        </Grid.Background>
+        Title="Gerente" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True">
 
-
-        <Label x:Name="lblBienvenida" Content="Bienvenido Gerente" HorizontalAlignment="Left" Margin="92,0,0,0" VerticalAlignment="Top" FontSize="72" FontFamily="Segoe UI Variable Text Semibold"/>
-        <Button x:Name="btnAddUSer" Content="Añadir Usuarios" HorizontalAlignment="Left" Margin="31,222,0,0" VerticalAlignment="Top" Click="btnAddUSer_Click" Height="56" Width="153" FontSize="18" FontWeight="Bold" BorderBrush="#FF121212" BorderThickness="2,2,2,2">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF59E7E3"/>
-                    <GradientStop Color="#FFE5EFE9" Offset="1"/>
+    <Border CornerRadius="50" Margin="0,0,152,43">
+        <Border.Background>
+            <ImageBrush ImageSource="\Img\Geren.png"
+                        Stretch="None"/>
+        </Border.Background>
+        <Border CornerRadius="50"
+                BorderThickness="5"
+                Opacity="0.87" Margin="0,0,-4,0" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.105"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.6"/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#462AD8" Offset="0"/>
+                    <GradientStop Color="#DA34AE" Offset="0.75" />
+                    <GradientStop Color="#8A16C1" Offset="1"/>
                 </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btnAddEventos" Content="Añadir Eventos" HorizontalAlignment="Left" Margin="207,220,0,0" VerticalAlignment="Top" Height="57" Width="140" FontSize="18" FontWeight="Bold" Click="btnAddEventos_Click" BorderBrush="#FF131313" BorderThickness="2,2,2,2">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF69E6DE"/>
-                    <GradientStop Color="White" Offset="1"/>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#060531" Offset="0"/>
+                    <GradientStop Color="#181448" Offset="0.75"/>
                 </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="998,292,0,0" VerticalAlignment="Top" Width="0"/>
+
+            </Border.Background>
 
 
-        <Button x:Name="btnVentas" Content="Ventas" HorizontalAlignment="Left" Margin="369,222,0,0" VerticalAlignment="Top" Height="55" Width="100" FontSize="18" FontWeight="Bold" Click="btnVentas_Click" BorderBrush="#FF1A1A1A" BorderThickness="2,2,2,2">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF63D2E2"/>
-                    <GradientStop Color="#FFECF8F2" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
 
-        </Button>
-        <Button x:Name="btnCerrar" Content="Cerrar sesión" HorizontalAlignment="Left" Margin="192,302,0,0" VerticalAlignment="Top" Height="52" Width="155" BorderBrush="#FF272727" FontSize="18" FontWeight="Bold" BorderThickness="2,2,2,2" Click="btnCerrar_Click">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF63D2E2"/>
-                    <GradientStop Color="White" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+            <Grid Width="590" Height="403" VerticalAlignment="Top" Opacity="0.8" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="303*"/>
+                    <RowDefinition Height="100*"/>
+                </Grid.RowDefinitions>
 
-    </Grid>
+
+
+                <Label x:Name="lblBienvenida" Content="Bienvenido Gerente" HorizontalAlignment="Left" Margin="-17,31,0,0" VerticalAlignment="Top" FontSize="67" FontFamily="Segoe UI Variable Text Semibold" Foreground="#FFFCF8F8" Width="664" Height="117"/>
+                <Button x:Name="btnAddUSer" Content="Añadir Usuarios" HorizontalAlignment="Left" Margin="34,191,0,0" VerticalAlignment="Top" Click="btnAddUSer_Click" Height="56" Width="153" FontSize="18" FontWeight="Bold" BorderBrush="#FF121212" BorderThickness="2,2,2,2" Foreground="#FFF1ECEC">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF3ECEC"/>
+                            <GradientStop Color="#FF1B18BA" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnAddEventos" Content="Añadir Eventos" HorizontalAlignment="Left" Margin="219,190,0,0" VerticalAlignment="Top" Height="57" Width="140" FontSize="18" FontWeight="Bold" Click="btnAddEventos_Click" BorderBrush="#FF131313" BorderThickness="2,2,2,2" Foreground="#FFF1EFEF">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF3ECEC"/>
+                            <GradientStop Color="#FF1B18BA" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button Content="Button" HorizontalAlignment="Left" Margin="998,292,0,0" VerticalAlignment="Top" Width="0" Grid.RowSpan="2"/>
+
+
+                <Button x:Name="btnVentas" Content="Ventas" HorizontalAlignment="Left" Margin="400,190,0,0" VerticalAlignment="Top" Height="55" Width="100" FontSize="18" FontWeight="Bold" Click="btnVentas_Click" BorderBrush="#FF1A1A1A" BorderThickness="2,2,2,2" Foreground="#FFEEEBEB">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF3ECEC"/>
+                            <GradientStop Color="#FF1B18BA" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+
+                </Button>
+                <Button x:Name="btnCerrar" Content="Cerrar sesión" HorizontalAlignment="Left" Margin="194,284,0,0" VerticalAlignment="Top" Height="52" Width="156" BorderBrush="#FF272727" FontSize="18" FontWeight="Bold" BorderThickness="2,2,2,2" Click="btnCerrar_Click" Foreground="#FFF3ECEC" Grid.RowSpan="2">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF3ECEC"/>
+                            <GradientStop Color="#FF1B18BA" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+
+            </Grid>
+        </Border>
+    </Border>
 </Window>

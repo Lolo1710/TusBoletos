@@ -9,21 +9,30 @@
 
   <ItemGroup>
     <None Remove="Img\Admi.jpg" />
+    <None Remove="Img\Admin.png" />
     <None Remove="Img\Av.jpg" />
     <None Remove="Img\avi.png" />
     <None Remove="Img\avion.png" />
+    <None Remove="Img\Avionv.jpg" />
+    <None Remove="Img\Flecha.png" />
+    <None Remove="Img\Flechaiz.png" />
     <None Remove="Img\fondo.jpg" />
     <None Remove="Img\Ge.jpg" />
+    <None Remove="Img\Geren.png" />
     <None Remove="Img\Gerente.jpg" />
     <None Remove="Img\ima.png" />
     <None Remove="Img\izquierda.png" />
     <None Remove="Img\mov.jpg" />
     <None Remove="Img\p.jpg" />
     <None Remove="Img\r.png" />
+    <None Remove="Img\viaje.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Img\Admi.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\Admin.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Img\Av.jpg">
@@ -35,10 +44,16 @@
     <Resource Include="Img\avion.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Img\Avionv.jpg" />
+    <Resource Include="Img\Flecha.png" />
+    <Resource Include="Img\Flechaiz.png" />
     <Resource Include="Img\fondo.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Img\Ge.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\Geren.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Img\Gerente.jpg">
@@ -59,6 +74,7 @@
     <Resource Include="Img\r.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Img\viaje.png" />
   </ItemGroup>
 
   <ItemGroup>

@@ -84,5 +84,10 @@ namespace ProyectotTUSBOLETOS
             TextBoxContrasena.Visibility = Visibility.Collapsed;
             txtPassword.Visibility = Visibility.Visible;
         }
+
+        private void txtUserName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -5,45 +5,90 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectotTUSBOLETOS.Vistas"
         mc:Ignorable="d"
-        Title="Roles" Height="450" Width="800">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="\Img\avion.png" AlignmentY="Top" AlignmentX="Center"/>
-        </Grid.Background>
+        Title="Roles" Height="450" Width="800"
+        
+         WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True">
 
-        <Label FontSize="50" Content="Roles" HorizontalAlignment="Left" Height="67" Margin="331,16,0,0" VerticalAlignment="Top" Width="234" FontFamily="Yu Gothic UI Semibold"/>
-        <Label Content="Nombre" HorizontalAlignment="Left" Height="34" Margin="50,218,0,0" VerticalAlignment="Top" Width="102" FontFamily="Arial Black"/>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="19" Margin="50,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
-        <Button x:Name="BtnAdd" Content="Guardar" HorizontalAlignment="Left" Height="23" Margin="67,275,0,0" VerticalAlignment="Top" Width="68" Background="#FF367BEB" Click="BtnAdd_Click" FontFamily="Arial Black"/>
+    <Border CornerRadius="50">
+        <Border.Background>
+            <ImageBrush ImageSource="\Img\Avionv.jpg"
+                        Stretch="None"/>
+        </Border.Background>
+        <Border CornerRadius="50"
+                BorderThickness="5"
+                Opacity="0.70">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#462AD8" Offset="0"/>
+                    <GradientStop Color="#DA34AE" Offset="0.75" />
+                    <GradientStop Color="#8A16C1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
 
-        <DataGrid x:Name="UserTable"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="175,110,52,76" Background="#FF83D4EF">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding PkRol}" />
-                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#060531" Offset="0"/>
+                    <GradientStop Color="#181448" Offset="0.75"/>
+                </LinearGradientBrush>
 
-                <DataGridTemplateColumn Header="Editar">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="Edit" Background="AliceBlue" Click="EditItem" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Delete">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button  Background="#FA4D4D" Content="Delete" Click="ElimiarItem"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
+            </Border.Background>
 
-        </DataGrid>
-        <TextBox x:Name="txtPkUser" HorizontalAlignment="Left" Height="18" Margin="50,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" IsEnabled="False"/>
-        <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="67,303,0,0" VerticalAlignment="Top" Width="68" Click="btnLimpiar_Click" Background="#FF367BEB" FontWeight="Bold" FontSize="14"/>
-        <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="81,35,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="back_Click" BorderThickness="0,0,0,0">
-            <Button.Background>
-                <ImageBrush ImageSource="\Img\avi.png"/>
-            </Button.Background>
-        </Button>
-    </Grid>
+
+            <Grid>
+
+                <Label FontSize="50" Content="Roles" HorizontalAlignment="Left" Height="67" Margin="331,16,0,0" VerticalAlignment="Top" Width="234" FontFamily="Yu Gothic UI Semibold" Foreground="#FFF8F6F6"/>
+                <Label Content="Nombre" HorizontalAlignment="Left" Height="34" Margin="33,146,0,0" VerticalAlignment="Top" Width="102" FontFamily="Arial Black" Foreground="#FFFCF9F9"/>
+                <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="19" Margin="33,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
+                <Button x:Name="BtnAdd" Content="Guardar" HorizontalAlignment="Left" Height="23" Margin="33,237,0,0" VerticalAlignment="Top" Width="68" Click="BtnAdd_Click" FontFamily="Arial Black" Foreground="#FFFEFBFB">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF251A9E" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+
+                <DataGrid x:Name="UserTable"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="175,110,52,76" Background="#FF2D2987" BorderBrush="#FF1F3C9E">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding PkRol}" />
+                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
+
+                        <DataGridTemplateColumn Header="Editar">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Edit" Background="AliceBlue" Click="EditItem" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Delete">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button  Background="#FF1C3092" Foreground="White" Content="Delete" Click="ElimiarItem"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+
+                </DataGrid>
+                <TextBox x:Name="txtPkUser" HorizontalAlignment="Left" Height="18" Margin="33,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" IsEnabled="False"/>
+                <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="33,287,0,0" VerticalAlignment="Top" Width="68" Click="btnLimpiar_Click" FontWeight="Bold" FontSize="14" Foreground="#FFFCF9F9">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF251A9E" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="81,35,0,0" VerticalAlignment="Top" Width="37" Height="32" Click="back_Click" BorderThickness="0,0,0,0">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Img\Flechaiz.png"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </Border>
+    </Border>
 </Window>

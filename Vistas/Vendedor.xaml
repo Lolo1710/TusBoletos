@@ -6,42 +6,95 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:ProyectotTUSBOLETOS.Vistas"
         mc:Ignorable="d"
-        Title="Vendedor" Height="450" Width="800">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="\Img\avion.png" AlignmentY="Top" AlignmentX="Center"/>
-        </Grid.Background>
-        <Label x:Name="lblBienvenida" Content="Bienvenido Vendedor" HorizontalAlignment="Left" Margin="180,23,0,0" VerticalAlignment="Top" FontSize="50"/>
-        <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="175,110,52,76" Background="#FF83D4EF" SelectionChanged="Eventos_SelectionChanged">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding PkEvento}" />
-                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
-                <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion}" />
-                <DataGridTextColumn Header="Asientos" Binding="{Binding Asientos}" />
-                <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" />
-                <DataGridTextColumn Header="Precio" Binding="{Binding Precio}" />
+        Title="Vendedor" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True">
 
-                <DataGridTemplateColumn Header="Accion">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="Elegir" Background="AliceBlue" Click="Seleccionar" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
+    <Border CornerRadius="50">
+        <Border.Background>
+            <ImageBrush ImageSource="\Img\Avionv.jpg"
+                        Stretch="None"/>
+        </Border.Background>
+        <Border CornerRadius="50"
+                BorderThickness="5"
+                Opacity="0.80">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#462AD8" Offset="0"/>
+                    <GradientStop Color="#DA34AE" Offset="0.75" />
+                    <GradientStop Color="#8A16C1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
 
-        </DataGrid>
-        <TextBox x:Name="txtCantidad" HorizontalAlignment="Left" Margin="18,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtCantidad_TextChanged"/>
-        <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="18,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <Label x:Name="lblCantidad" Content="Cantidad" HorizontalAlignment="Left" Margin="18,104,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-        <Label x:Name="lblPrecio" Content="Precio" HorizontalAlignment="Left" Margin="18,153,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-        <Button x:Name="btnCalcular" Content="Calcular" HorizontalAlignment="Left" Margin="10,221,0,0" VerticalAlignment="Top" Width="60" Click="btnCalcular_Click" Background="#FF367BEB" BorderBrush="#FF2B2A2A" FontWeight="Bold" FontSize="14" Height="28"/>
-        <Button x:Name="btnEmitir" Content="Ordenar" HorizontalAlignment="Left" Margin="81,221,0,0" VerticalAlignment="Top" Width="65" Click="btnEmitir_Click" FontWeight="Bold" FontSize="14" Height="26" BorderBrush="#FF161616" Background="#FF367BEB"/>
-        <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="60,44,0,0" VerticalAlignment="Top" Width="36" Height="35" Click="back_Click" BorderThickness="0,0,0,0">
-            <Button.Background>
-                <ImageBrush ImageSource="\Img\avi.png"/>
-            </Button.Background>
-        </Button>
-    </Grid>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#060531" Offset="0"/>
+                    <GradientStop Color="#181448" Offset="0.75"/>
+                </LinearGradientBrush>
+
+            </Border.Background>
+
+
+
+            <Grid>
+                <Label x:Name="lblBienvenida" Content="Bienvenido Vendedor" HorizontalAlignment="Left" Margin="244,18,0,0" VerticalAlignment="Top" FontSize="50" Foreground="#FFFDFBFB"/>
+                <DataGrid x:Name="Eventos"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="244,124,35,105" Background="#FF2D2987" SelectionChanged="Eventos_SelectionChanged" BorderBrush="#FF2D2987">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding PkEvento}" />
+                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
+                        <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion}" />
+                        <DataGridTextColumn Header="Asientos" Binding="{Binding Asientos}" />
+                        <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" />
+                        <DataGridTextColumn Header="Precio" Binding="{Binding Precio}" />
+
+                        <DataGridTemplateColumn Header="Accion">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Elegir" Background="#FF2D2987" Foreground="White" Click="Seleccionar" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+
+                </DataGrid>
+                <TextBox x:Name="txtCantidad" HorizontalAlignment="Left" Margin="92,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtCantidad_TextChanged">
+                    <TextBox.Background>
+                        <SolidColorBrush Color="White" Opacity="0.6"/>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="92,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False">
+                    <TextBox.Background>
+                        <SolidColorBrush Color="White" Opacity="0.6"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Label x:Name="lblCantidad" Content="Cantidad" HorizontalAlignment="Left" Margin="18,104,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="#FFFAFAFA"/>
+                <Label x:Name="lblPrecio" Content="Precio" HorizontalAlignment="Left" Margin="18,153,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="#FFFCFAFA"/>
+                <Button x:Name="btnCalcular" Content="Calcular" HorizontalAlignment="Left" Margin="43,220,0,0" VerticalAlignment="Top" Width="60" Click="btnCalcular_Click" BorderBrush="#FF2B2A2A" FontWeight="Bold" FontSize="14" Height="26" Foreground="#FFFCFAFA">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF2D2987" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnEmitir" Content="Ordenar" HorizontalAlignment="Left" Margin="131,220,0,0" VerticalAlignment="Top" Width="66" Click="btnEmitir_Click" FontWeight="Bold" FontSize="14" Height="26" BorderBrush="#FF161616" Foreground="#FFFCFAFA">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF2D2987" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="67,39,0,0" VerticalAlignment="Top" Width="36" Height="35" Click="back_Click" BorderThickness="0,0,0,0">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Img\Flechaiz.png"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </Border>
+    </Border>
 
 </Window>

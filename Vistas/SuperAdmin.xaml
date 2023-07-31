@@ -5,15 +5,78 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectotTUSBOLETOS.Vistas"
         mc:Ignorable="d"
-        Title="SuperAdmin" Height="450" Width="800">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="\Img\Admi.jpg" AlignmentY="Top" AlignmentX="Center"/>
-        </Grid.Background>
-        <Label x:Name="lblBienvenida" Content="Bienvenido     Admin" HorizontalAlignment="Left" Margin="47,10,0,0" VerticalAlignment="Top" FontSize="72" FontFamily="Segoe UI Variable Text Semibold"/>
-        <Button x:Name="btnAddRoles" Content="Añadir Roles" HorizontalAlignment="Left" Margin="359,203,0,0" VerticalAlignment="Top" Click="btnAddRoles_Click" Height="57" Width="138" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.932,0.523" Background="#FF367BEB"/>
-        <Button x:Name="btnCerrar" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="328,334,0,0" VerticalAlignment="Top" Height="51" Width="200" Click="btnCerrar_Click" Background="#FF367BEB" FontSize="14" FontWeight="Bold"/>
+        Title="SuperAdmin" Height="456" Width="960"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Border CornerRadius="50" Margin="10,36,51,-5" RenderTransformOrigin="0.5,0.5">
+        <Border.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.068"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Border.RenderTransform>
+        <Border.Background>
+            <ImageBrush ImageSource="\Img\Admin.png"
+                        Stretch="None"/>
+        </Border.Background>
+        <Border CornerRadius="18"
+                BorderThickness="6"
+                Opacity="0.86" Height="431" HorizontalAlignment="Center" VerticalAlignment="Top" Width="628" Margin="0,-6,0,0" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.199"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#462AD8" Offset="0"/>
+                    <GradientStop Color="#DA34AE" Offset="0.75" />
+                    <GradientStop Color="#8A16C1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#060531" Offset="0"/>
+                    <GradientStop Color="#181448" Offset="0.75"/>
+                </LinearGradientBrush>
+
+            </Border.Background>
 
 
-    </Grid>
+
+            <Grid>
+                <Label x:Name="lblBienvenida" Content="Bienvenido Admin" HorizontalAlignment="Left" Margin="45,37,0,0" VerticalAlignment="Top" FontSize="60" FontFamily="Segoe UI Variable Text Semibold" Width="584" Height="98" Foreground="#FFFEFBFB" FontWeight="Bold"/>
+                <Button x:Name="btnAddRoles" Content="Añadir Roles" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnAddRoles_Click" Height="56" Width="138" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.932,0.523" Foreground="#FFF2EDED" BorderBrush="#FF131313">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF6D1E9A" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnCerrar" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="236,255,0,0" VerticalAlignment="Top" Height="54" Width="138" Click="btnCerrar_Click" FontSize="14" FontWeight="Bold" Foreground="#FFF2ECEC" BorderBrush="#FF131313">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF6D1E9A" Offset="1"/>
+                            <GradientStop Color="#FF111111"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+
+
+            </Grid>
+        </Border>
+    </Border>
+
 </Window>

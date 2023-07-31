@@ -5,57 +5,95 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectotTUSBOLETOS.Vistas"
         mc:Ignorable="d"
-        Title="Eventos" Height="450" Width="800">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="\Img\p.jpg" AlignmentY="Top" AlignmentX="Center"/>
-        </Grid.Background>
+        Title="Eventos" Height="450" Width="800"
+        
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True">
 
-        <Label Content="Eventos" HorizontalAlignment="Left" Margin="353,16,0,0" VerticalAlignment="Top" FontSize="50"/>
-        <Grid HorizontalAlignment="Left" Margin="10,18,0,69" Width="172">
-            <Label Content="Nombre" HorizontalAlignment="Left" Margin="11,39,0,0" VerticalAlignment="Top"/>
-            <Label Content="Asientos" HorizontalAlignment="Left" Margin="14,156,0,0" VerticalAlignment="Top"/>
-            <Label Content="Precio" HorizontalAlignment="Left" Margin="16,267,0,0" VerticalAlignment="Top"/>
-            <Label Content="Descripcion" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txtID" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="24" IsEnabled="False"/>
-            <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="23"/>
-            <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="0,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="27"/>
-            <TextBox x:Name="txtAsientos" HorizontalAlignment="Left" Margin="0,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="29"/>
-            <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="0,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="29"/>
-            <Label Content="Fecha" HorizontalAlignment="Left" Margin="16,216,0,0" VerticalAlignment="Top"/>
-            <DatePicker x:Name="dateInput" Margin="0,243,10,0" VerticalAlignment="Top"/>
-        </Grid>
-        <DataGrid x:Name="EventTable"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="217,112,10,56" Background="#FF83D4EF" SelectionChanged="EventTable_SelectionChanged">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding PkEvento}" />
-                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
-                <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion}" />
-                <DataGridTextColumn Header="Asientos" Binding="{Binding Asientos}" />
-                <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" />
-                <DataGridTextColumn Header="Precio" Binding="{Binding Precio}" />
+    <Border CornerRadius="50">
+        <Border.Background>
+            <ImageBrush ImageSource="\Img\Avionv.jpg"
+                        Stretch="None"/>
+        </Border.Background>
+        <Border CornerRadius="50"
+                BorderThickness="5"
+                Opacity="0.70">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#462AD8" Offset="0"/>
+                    <GradientStop Color="#DA34AE" Offset="0.75" />
+                    <GradientStop Color="#8A16C1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
 
-                <DataGridTemplateColumn Header="Editar">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="Edit" Background="AliceBlue" Click="EditItem"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Delete">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button  Background="#FA4D4D" Content="Delete" Click="Delete"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#060531" Offset="0"/>
+                    <GradientStop Color="#181448" Offset="0.75"/>
+                </LinearGradientBrush>
 
-        </DataGrid>
-        <Button x:Name="btnAdd" Content="Guardar" HorizontalAlignment="Left" Margin="53,365,0,0" VerticalAlignment="Top" Height="30" Width="86" Click="btnAdd_Click" Background="#FF367BEB" BorderBrush="#FF0E0E0E" BorderThickness="2,2,2,1"/>
-        <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="182,10,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="back_Click" BorderBrush="#FFAFF4D9" BorderThickness="0,0,0,0">
-            <Button.Background>
-                <ImageBrush ImageSource="\Img\avi.png"/>
-            </Button.Background>
-        </Button>
-    </Grid>
+            </Border.Background>
+
+
+            <Grid>
+
+                <Label Content="Eventos" HorizontalAlignment="Left" Margin="353,16,0,0" VerticalAlignment="Top" FontSize="50" Foreground="#FFFCF7F7"/>
+                <Grid HorizontalAlignment="Left" Margin="10,18,0,69" Width="172">
+                    <Label Content="Nombre" HorizontalAlignment="Left" Margin="11,39,0,0" VerticalAlignment="Top" Foreground="#FFFCFAFA"/>
+                    <Label Content="Asientos" HorizontalAlignment="Left" Margin="14,156,0,0" VerticalAlignment="Top" Foreground="#FFFEFBFB"/>
+                    <Label Content="Precio" HorizontalAlignment="Left" Margin="16,267,0,0" VerticalAlignment="Top" Foreground="#FFFCF9F9"/>
+                    <Label Content="Descripcion" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" Foreground="#FFFAF9F9"/>
+                    <TextBox x:Name="txtID" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="24" IsEnabled="False"/>
+                    <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="23"/>
+                    <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="0,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="27"/>
+                    <TextBox x:Name="txtAsientos" HorizontalAlignment="Left" Margin="0,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="29"/>
+                    <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="0,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="29"/>
+                    <Label Content="Fecha" HorizontalAlignment="Left" Margin="16,216,0,0" VerticalAlignment="Top" Foreground="#FFFEFBFB"/>
+                    <DatePicker x:Name="dateInput" Foreground="White" Margin="0,243,10,0" VerticalAlignment="Top"/>
+                </Grid>
+                <DataGrid x:Name="EventTable"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="217,112,10,56" Background="#FF2D2987" SelectionChanged="EventTable_SelectionChanged" BorderBrush="#FF201ED8">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding PkEvento}" />
+                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
+                        <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion}" />
+                        <DataGridTextColumn Header="Asientos" Binding="{Binding Asientos}" />
+                        <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" />
+                        <DataGridTextColumn Header="Precio" Binding="{Binding Precio}" />
+
+                        <DataGridTemplateColumn Header="Editar">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Edit" Background="#FF253182" Foreground="White" Click="EditItem"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Delete">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button  Background="#FF253182" Foreground="White" Content="Delete" Click="Delete"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+
+                </DataGrid>
+                <Button x:Name="btnAdd" Content="Guardar" HorizontalAlignment="Left" Margin="53,365,0,0" VerticalAlignment="Top" Height="30" Width="86" Click="btnAdd_Click" BorderBrush="#FF0E0E0E" BorderThickness="2,2,2,1" Foreground="#FFF6F2F2">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF1B18BA" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="182,10,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="back_Click" BorderBrush="#FFAFF4D9" BorderThickness="0,0,0,0">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Img\Flechaiz.png"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </Border>
+    </Border>
 </Window>
