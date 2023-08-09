@@ -61,15 +61,22 @@ namespace ProyectotTUSBOLETOS.Vistas
 
         private void btnCalcular_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtCantidad.Text))
+            if (IDEvento != 0) 
             {
-                int cantidad = int.Parse(txtCantidad.Text);
-                total = vendedor.Calcular(IDEvento, cantidad);
-                txtPrecio.Text = total.ToString();
+                if (!string.IsNullOrEmpty(txtCantidad.Text))
+                {
+                    int cantidad = int.Parse(txtCantidad.Text);
+                    total = vendedor.Calcular(IDEvento, cantidad);
+                    txtPrecio.Text = total.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Por favor ingresa la cantidad de boletos a cotizar");
+                }
             }
             else
             {
-                MessageBox.Show("Por favor ingresa la cantidad de boletos a cotizar");
+                MessageBox.Show("Por favor selecciona un evento antes de calcular");
             }
         }
 
