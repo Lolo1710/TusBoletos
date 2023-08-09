@@ -1,4 +1,5 @@
-﻿using ProyectotTUSBOLETOS.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using ProyectotTUSBOLETOS.Context;
 using ProyectotTUSBOLETOS.Entities;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,10 @@ namespace ProyectotTUSBOLETOS.Services
 
                     List<Venta> ventas = new List<Venta>();
 
-                    return _context.Ventas.ToList();
+                    return _context.Ventas
+                        .Include(x => x.Usuarios)
+                        .Include(x => x.Eventos)
+                        .ToList();
                 }
 
             }

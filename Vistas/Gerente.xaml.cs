@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectotTUSBOLETOS.Context;
+using ProyectotTUSBOLETOS.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,7 @@ namespace ProyectotTUSBOLETOS.Vistas
         public Gerente()
         {
             InitializeComponent();
+            Bienvenida();
         }
 
         private void btnAddUSer_Click(object sender, RoutedEventArgs e)
@@ -57,6 +60,17 @@ namespace ProyectotTUSBOLETOS.Vistas
             MainWindow ejecutar = new MainWindow();
             ejecutar.Show();
             Close();
+        }
+
+        private void Bienvenida()
+        {
+            Usuario usuario = new Usuario();
+            int id = Auth.Authentication.PkUser;
+            using (var _context = new ApplicationDbContext())
+            {
+                usuario = _context.Usuarios.Find(id);
+            }
+            lblBienvenida.Content = $"Bienvenido {usuario.Nombre}";
         }
     }
 }

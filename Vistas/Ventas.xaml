@@ -15,10 +15,6 @@
         AllowsTransparency="True">
 
     <Border CornerRadius="50">
-        <Border.Background>
-            <ImageBrush ImageSource="\Img\Avionv.jpg"
-                        Stretch="None"/>
-        </Border.Background>
         <Border CornerRadius="50"
                 BorderThickness="5"
                 Opacity="0.87">
@@ -40,7 +36,7 @@
 
             <Grid>
               
-                <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="38,25,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="back_Click" BorderBrush="{x:Null}">
+                <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="20,25,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="back_Click" BorderBrush="{x:Null}">
                     <Button.Background>
                         <ImageBrush ImageSource="\Img\Flechaiz.png"/>
                     </Button.Background>
@@ -51,8 +47,8 @@
                         <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad}" />
                         <DataGridTextColumn Header="Total" Binding="{Binding Total}" />
                         <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" />
-                        <DataGridTextColumn Header="FkEvento" Binding="{Binding FkEvento.Nombre}" Visibility="Collapsed" />
-                        <DataGridTextColumn Header="FkUsuario" Binding="{Binding FkUsuario.Nombre}" Visibility="Collapsed" />
+                        <DataGridTextColumn Header="Vendedor" Binding="{Binding Usuarios.Nombre}" />
+                        <DataGridTextColumn Header="Evento" Binding="{Binding Eventos.Nombre}" />
 
                     </DataGrid.Columns>
 

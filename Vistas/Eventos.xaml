@@ -14,10 +14,6 @@
         AllowsTransparency="True">
 
     <Border CornerRadius="50">
-        <Border.Background>
-            <ImageBrush ImageSource="\Img\Avionv.jpg"
-                        Stretch="None"/>
-        </Border.Background>
         <Border CornerRadius="50"
                 BorderThickness="5"
                 Opacity="0.70">
@@ -52,7 +48,7 @@
                     <TextBox x:Name="txtAsientos" HorizontalAlignment="Left" Margin="0,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="29"/>
                     <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="0,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="29"/>
                     <Label Content="Fecha" HorizontalAlignment="Left" Margin="16,216,0,0" VerticalAlignment="Top" Foreground="#FFFEFBFB"/>
-                    <DatePicker x:Name="dateInput" Foreground="White" Margin="0,243,10,0" VerticalAlignment="Top"/>
+                    <DatePicker x:Name="dateInput" Foreground="White" Margin="0,242,10,0" VerticalAlignment="Top" Height="31"/>
                 </Grid>
                 <DataGrid x:Name="EventTable"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="217,112,10,56" Background="#FF2D2987" SelectionChanged="EventTable_SelectionChanged" BorderBrush="#FF201ED8">
                     <DataGrid.Columns>
@@ -80,17 +76,25 @@
                     </DataGrid.Columns>
 
                 </DataGrid>
-                <Button x:Name="btnAdd" Content="Guardar" HorizontalAlignment="Left" Margin="53,365,0,0" VerticalAlignment="Top" Height="30" Width="86" Click="btnAdd_Click" BorderBrush="#FF0E0E0E" BorderThickness="2,2,2,1" Foreground="#FFF6F2F2">
+                <Button x:Name="btnAdd" Content="Guardar" HorizontalAlignment="Left" Margin="101,360,0,0" VerticalAlignment="Top" Height="30" Width="86" Click="btnAdd_Click" BorderBrush="#FF0E0E0E" BorderThickness="2,2,2,1" Foreground="#FFF6F2F2">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black"/>
+                            <GradientStop Color="White"/>
                             <GradientStop Color="#FF1B18BA" Offset="1"/>
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-                <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="182,10,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="back_Click" BorderBrush="#FFAFF4D9" BorderThickness="0,0,0,0">
+                <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="217,10,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="back_Click" BorderBrush="#FFAFF4D9" BorderThickness="0,0,0,0">
                     <Button.Background>
                         <ImageBrush ImageSource="\Img\Flechaiz.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="BtnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="10,360,0,0" VerticalAlignment="Top" Height="30" Width="86" Click="BtnLimpiar_Click" BorderBrush="#FF0E0E0E" BorderThickness="2,2,2,1" Foreground="#FFF6F2F2">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="White"/>
+                            <GradientStop Color="#FF1B18BA" Offset="1"/>
+                        </LinearGradientBrush>
                     </Button.Background>
                 </Button>
             </Grid>

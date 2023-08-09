@@ -1,4 +1,5 @@
 ﻿using LiveCharts.Wpf;
+using ProyectotTUSBOLETOS.Context;
 using ProyectotTUSBOLETOS.Entities;
 using ProyectotTUSBOLETOS.Services;
 using System;
@@ -104,15 +105,30 @@ namespace ProyectotTUSBOLETOS.Vistas
             }
             else
             {
-                MessageBox.Show("Faltan datos por agregar");
+                MessageBox.Show("No hay datos que limpiar");
             }
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            SuperAdmin admin = new SuperAdmin();
-            admin.Show();
-            this.Close();
+            Usuario usuario = new Usuario();
+            int? rol = Auth.Authentication.FkUser;
+            using (var _context = new ApplicationDbContext())
+            {
+                usuario = _context.Usuarios.Find(rol);
+            }
+            if (usuario.FkRol == 1)
+            {
+                SuperAdmin admin = new SuperAdmin();
+                admin.Show();
+                this.Close();
+            }
+            else
+            {
+                Gerente gerente = new Gerente();
+                gerente.Show();
+                this.Close();
+            }
         }
     }
 }

@@ -31,8 +31,9 @@ namespace ProyectotTUSBOLETOS.Vistas
         public Vendedor()
         {
             InitializeComponent();
-            GetUserTable();
+            GetEvents();
             Saludo();
+            Bienvenida();
         }
 
         private void Saludo()
@@ -41,9 +42,13 @@ namespace ProyectotTUSBOLETOS.Vistas
             lblBienvenida.Content = saludo;
         }
 
-        public void GetUserTable()
+        public void GetEvents()
         {
-            Eventos.ItemsSource = vendedor.GetEventos();
+            List<Evento> list = vendedor.GetEventos();
+
+            List<Evento> eventosConAsientos = list.Where(evento => evento.Asientos > 0).ToList();
+
+            Eventos.ItemsSource = eventosConAsientos;
         }
 
         public void Seleccionar(object sender, RoutedEventArgs e)
@@ -56,7 +61,7 @@ namespace ProyectotTUSBOLETOS.Vistas
 
         private void btnCalcular_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtCantidad.Text) && !string.IsNullOrEmpty(txtPrecio.Text))
+            if (!string.IsNullOrEmpty(txtCantidad.Text))
             {
                 int cantidad = int.Parse(txtCantidad.Text);
                 total = vendedor.Calcular(IDEvento, cantidad);
@@ -64,7 +69,7 @@ namespace ProyectotTUSBOLETOS.Vistas
             }
             else
             {
-                MessageBox.Show("Faltan datos por agregar");
+                MessageBox.Show("Por favor ingresa la cantidad de boletos a cotizar");
             }
         }
 
@@ -75,14 +80,14 @@ namespace ProyectotTUSBOLETOS.Vistas
                 int cantidad = int.Parse(txtCantidad.Text);
                 vendedor.Ordenar(IDEvento, cantidad, total);
 
-                GetUserTable();
+                GetEvents();
 
                 txtCantidad.Clear();
                 txtPrecio.Clear();
             }
             else
             {
-                MessageBox.Show("Faltan datos por agregar");
+                MessageBox.Show("Ingresa la cantidad de boletos y verifica que tenga un precio asignado, de lo contrario comunicate con el gerente");
             }
         }
         public void ventacompleta()
@@ -104,6 +109,17 @@ namespace ProyectotTUSBOLETOS.Vistas
             MainWindow vendedor = new MainWindow ();
             vendedor.Show();
             this.Close();
+        }
+
+        private void Bienvenida()
+        {
+            Usuario usuario = new Usuario();
+            int id = Auth.Authentication.PkUser;
+            using (var _context = new ApplicationDbContext())
+            {
+                usuario = _context.Usuarios.Find(id);
+            }
+            lblBienvenida.Content = $"Bienvenido {usuario.Nombre}";
         }
 
         private void Eventos_SelectionChanged(object sender, SelectionChangedEventArgs e)

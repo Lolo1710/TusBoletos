@@ -38,9 +38,8 @@ namespace ProyectotTUSBOLETOS
             string password = txtPassword.Password;
 
             var response = services.Login(user, password);
-            //ventas.PasarDatos(response);
-
-            //MessageBox.Show($"{response.Nombre} {response.PkUsuario}");
+            Auth.Authentication.PkUser = response.PkUsuario;
+            Auth.Authentication.FkUser = response.FkRol;
 
             if(response != null)
             {
@@ -83,11 +82,6 @@ namespace ProyectotTUSBOLETOS
             txtPassword.Password = TextBoxContrasena.Text;
             TextBoxContrasena.Visibility = Visibility.Collapsed;
             txtPassword.Visibility = Visibility.Visible;
-        }
-
-        private void txtUserName_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

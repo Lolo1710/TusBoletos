@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using LiveCharts;
 using LiveCharts.Wpf;
+using ProyectotTUSBOLETOS.Context;
+using ProyectotTUSBOLETOS.Entities;
 using ProyectotTUSBOLETOS.Services;
 
 namespace ProyectotTUSBOLETOS.Vistas
@@ -46,9 +48,24 @@ namespace ProyectotTUSBOLETOS.Vistas
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            Gerente gerente = new Gerente();
-            gerente.Show();
-            this.Close();
+            Usuario usuario = new Usuario();
+            int? rol = Auth.Authentication.FkUser;
+            using (var _context = new ApplicationDbContext())
+            {
+                usuario = _context.Usuarios.Find(rol);
+            }
+            if (usuario.FkRol == 1)
+            {
+                SuperAdmin admin = new SuperAdmin();
+                admin.Show();
+                this.Close();
+            }
+            else
+            {
+                Gerente gerente = new Gerente();
+                gerente.Show();
+                this.Close();
+            }
         }
 
         private void Eventos_SelectionChanged(object sender, SelectionChangedEventArgs e)

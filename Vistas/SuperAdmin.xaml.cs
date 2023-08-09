@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectotTUSBOLETOS.Context;
+using ProyectotTUSBOLETOS.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,7 @@ namespace ProyectotTUSBOLETOS.Vistas
         public SuperAdmin()
         {
             InitializeComponent();
+            Bienvenida();
         }
         private void btnCerrar_Click(object sender, RoutedEventArgs e)
         {
@@ -29,11 +32,44 @@ namespace ProyectotTUSBOLETOS.Vistas
             ejecutar.Show();
             Close();
         }
+
+        private void btnAddUSer_Click(object sender, RoutedEventArgs e)
+        {
+            Sistema sistema = new Sistema();
+            Close();
+            sistema.Show();
+        }
+
+        private void btnAddEventos_Click(object sender, RoutedEventArgs e)
+        {
+            Eventos evento = new Eventos();
+            Close();
+            evento.Show();
+        }
+
+        private void btnVentas_Click(object sender, RoutedEventArgs e)
+        {
+            Ventas venta = new Ventas();
+            Close();
+            venta.Show();
+        }
+
         private void btnAddRoles_Click(object sender, RoutedEventArgs e)
         {
             Roles roles = new Roles();
             Close();
             roles.Show();
+        }
+
+        private void Bienvenida()
+        {
+            Usuario usuario = new Usuario();
+            int id = Auth.Authentication.PkUser;
+            using (var _context = new ApplicationDbContext())
+            {
+                usuario = _context.Usuarios.Find(id);
+            }
+            lblBienvenida.Content = $"Bienvenido {usuario.Nombre}";
         }
     }
 }

@@ -79,7 +79,7 @@ namespace ProyectotTUSBOLETOS.Vistas
             }
             else
             {
-                MessageBox.Show("Faltan datos por agregar");
+                MessageBox.Show("Por favor rellena todos los campos, son obligatorios");
             }
         }
 
@@ -118,14 +118,46 @@ namespace ProyectotTUSBOLETOS.Vistas
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            Gerente gerente = new Gerente();
-            gerente.Show();
-            this.Close();
+            Usuario usuario = new Usuario();
+            int? rol = Auth.Authentication.FkUser;
+            using (var _context = new ApplicationDbContext())
+            {
+                usuario = _context.Usuarios.Find(rol);
+            }
+            if(usuario.FkRol == 1)
+            {
+                SuperAdmin admin = new SuperAdmin();
+                admin.Show();
+                this.Close();
+            }
+            else
+            {
+                Gerente gerente = new Gerente();
+                gerente.Show();
+                this.Close();
+            }
         }
 
         private void EventTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void BtnLimpiar_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtID.Text))
+            {
+                txtID.Clear();
+                txtNombre.Clear();
+                txtPrecio.Clear();
+                txtAsientos.Clear();
+                txtDescripcion.Clear();
+                dateInput.SelectedDate = null;
+            }
+            else
+            {
+                MessageBox.Show("No hay datos que limpiar");
+            }
         }
     }
 }

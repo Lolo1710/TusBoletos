@@ -19,9 +19,9 @@ namespace ProyectotTUSBOLETOS.Services
                 using (var _context = new ApplicationDbContext())
                 {
 
-                    List<Evento> eventos = new List<Evento>();
+                    List<Evento> eventos = _context.Eventos.ToList();
 
-                    return _context.Eventos.ToList();
+                    return eventos;
                 }
 
             }
@@ -73,10 +73,12 @@ namespace ProyectotTUSBOLETOS.Services
                         }
                         else
                         {
+                            int iduser = Auth.Authentication.PkUser;
                             venta.Cantidad = cantidad;
                             venta.Total = total;
                             venta.Fecha = DateTime.Now;
                             venta.FkEvento = IDEvento;
+                            venta.FkUsuario = iduser;
 
                             _context.Ventas.Add(venta);
                             _context.SaveChanges();

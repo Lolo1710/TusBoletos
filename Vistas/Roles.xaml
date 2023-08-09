@@ -14,10 +14,6 @@
         AllowsTransparency="True">
 
     <Border CornerRadius="50">
-        <Border.Background>
-            <ImageBrush ImageSource="\Img\Avionv.jpg"
-                        Stretch="None"/>
-        </Border.Background>
         <Border CornerRadius="50"
                 BorderThickness="5"
                 Opacity="0.70">
@@ -43,10 +39,10 @@
                 <Label FontSize="50" Content="Roles" HorizontalAlignment="Left" Height="67" Margin="331,16,0,0" VerticalAlignment="Top" Width="234" FontFamily="Yu Gothic UI Semibold" Foreground="#FFF8F6F6"/>
                 <Label Content="Nombre" HorizontalAlignment="Left" Height="34" Margin="33,146,0,0" VerticalAlignment="Top" Width="102" FontFamily="Arial Black" Foreground="#FFFCF9F9"/>
                 <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="19" Margin="33,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
-                <Button x:Name="BtnAdd" Content="Guardar" HorizontalAlignment="Left" Height="23" Margin="33,237,0,0" VerticalAlignment="Top" Width="68" Click="BtnAdd_Click" FontFamily="Arial Black" Foreground="#FFFEFBFB">
+                <Button x:Name="BtnAdd" Content="Guardar" HorizontalAlignment="Left" Height="23" Margin="95,236,0,0" VerticalAlignment="Top" Width="64" Click="BtnAdd_Click" FontFamily="Arial Black" Foreground="#FFFEFBFB">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black"/>
+                            <GradientStop Color="White"/>
                             <GradientStop Color="#FF251A9E" Offset="1"/>
                         </LinearGradientBrush>
                     </Button.Background>
@@ -75,15 +71,15 @@
 
                 </DataGrid>
                 <TextBox x:Name="txtPkUser" HorizontalAlignment="Left" Height="18" Margin="33,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" IsEnabled="False"/>
-                <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="33,287,0,0" VerticalAlignment="Top" Width="68" Click="btnLimpiar_Click" FontWeight="Bold" FontSize="14" Foreground="#FFFCF9F9">
+                <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="33,236,0,0" VerticalAlignment="Top" Width="57" Click="btnLimpiar_Click" FontWeight="Bold" FontSize="14" Foreground="#FFFCF9F9">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black"/>
+                            <GradientStop Color="White"/>
                             <GradientStop Color="#FF251A9E" Offset="1"/>
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-                <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="81,35,0,0" VerticalAlignment="Top" Width="37" Height="32" Click="back_Click" BorderThickness="0,0,0,0">
+                <Button x:Name="back" Content="" HorizontalAlignment="Left" Margin="175,54,0,0" VerticalAlignment="Top" Width="37" Height="32" Click="back_Click" BorderThickness="0,0,0,0">
                     <Button.Background>
                         <ImageBrush ImageSource="\Img\Flechaiz.png"/>
                     </Button.Background>

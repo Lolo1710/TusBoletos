@@ -21,10 +21,6 @@
                 <TranslateTransform/>
             </TransformGroup>
         </Border.RenderTransform>
-        <Border.Background>
-            <ImageBrush ImageSource="\Img\Admin.png"
-                        Stretch="None"/>
-        </Border.Background>
         <Border CornerRadius="18"
                 BorderThickness="6"
                 Opacity="0.86" Height="431" HorizontalAlignment="Center" VerticalAlignment="Top" Width="628" Margin="0,-6,0,0" RenderTransformOrigin="0.5,0.5">
@@ -56,22 +52,39 @@
 
             <Grid>
                 <Label x:Name="lblBienvenida" Content="Bienvenido Admin" HorizontalAlignment="Left" Margin="45,37,0,0" VerticalAlignment="Top" FontSize="60" FontFamily="Segoe UI Variable Text Semibold" Width="584" Height="98" Foreground="#FFFEFBFB" FontWeight="Bold"/>
-                <Button x:Name="btnAddRoles" Content="Añadir Roles" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnAddRoles_Click" Height="56" Width="138" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.932,0.523" Foreground="#FFF2EDED" BorderBrush="#FF131313">
+                <Button x:Name="btnAddRoles" Content="Añadir Roles" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnAddRoles_Click" Height="55" Width="138" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.932,0.523" Foreground="#FFF2EDED" BorderBrush="#FF131313" Margin="336,172,0,0">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black"/>
-                            <GradientStop Color="#FF6D1E9A" Offset="1"/>
+                            <GradientStop Color="White"/>
+                            <GradientStop Color="#FF1B18BA" Offset="1"/>
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-                <Button x:Name="btnCerrar" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="236,255,0,0" VerticalAlignment="Top" Height="54" Width="138" Click="btnCerrar_Click" FontSize="14" FontWeight="Bold" Foreground="#FFF2ECEC" BorderBrush="#FF131313">
+                <Button x:Name="btnCerrar" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="236,255,0,0" VerticalAlignment="Top" Height="54" Width="138" Click="btnCerrar_Click" FontSize="14" FontWeight="Bold" Foreground="#FFF2ECEC" BorderBrush="#FF131313" Background="Black"/>
+                <Button x:Name="btnAddUSer" Content="Añadir Usuarios" HorizontalAlignment="Left" Margin="14,174,0,0" VerticalAlignment="Top" Click="btnAddUSer_Click" Height="56" Width="153" FontSize="18" FontWeight="Bold" BorderBrush="#FF121212" BorderThickness="2,2,2,2" Foreground="#FFF1ECEC">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black"/>
-                            <GradientStop Color="#FF6D1E9A" Offset="1"/>
-                            <GradientStop Color="#FF111111"/>
+                            <GradientStop Color="#FFF3ECEC"/>
+                            <GradientStop Color="#FF1B18BA" Offset="1"/>
                         </LinearGradientBrush>
                     </Button.Background>
+                </Button>
+                <Button x:Name="btnAddEventos" Content="Añadir Eventos" HorizontalAlignment="Left" Margin="182,172,0,0" VerticalAlignment="Top" Height="57" Width="140" FontSize="18" FontWeight="Bold" Click="btnAddEventos_Click" BorderBrush="#FF131313" BorderThickness="2,2,2,2" Foreground="#FFF1EFEF">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF3ECEC"/>
+                            <GradientStop Color="#FF1B18BA" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnVentas" Content="Ventas" HorizontalAlignment="Left" Margin="490,171,0,0" VerticalAlignment="Top" Height="55" Width="100" FontSize="18" FontWeight="Bold" Click="btnVentas_Click" BorderBrush="#FF1A1A1A" BorderThickness="2,2,2,2" Foreground="#FFEEEBEB">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF3ECEC"/>
+                            <GradientStop Color="#FF1B18BA" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+
                 </Button>
 
 
